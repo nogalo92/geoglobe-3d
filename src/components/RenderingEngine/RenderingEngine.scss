@@ -1,0 +1,19 @@
+.rendering-engine-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+
+  canvas {
+    outline: none;
+  }
+}
+
+.disable-highlight {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10 and Edge Legacy */
+  user-select: none; /* Standard syntax (Chrome, Edge, Opera) */
+}
