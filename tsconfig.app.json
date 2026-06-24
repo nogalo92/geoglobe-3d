@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
     "paths": {
-      "@components/*": ["./src/components/*"],
+      "@GUIcomponents/*": ["./src/components/GUI/*"],
       "@scenes/*": ["./src/scenes/*"],
-      "@shared/*": ["./src/scenes/_shared/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@customTypes/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@globalTypes": ["./src/types"],
+      "@data": ["./src/data"],
+      "@game": ["./src/game"],
+
+      "@globalSignals": ["./src/signals"],
+      "@globalUtils": ["./src/utils"],
+
+      "@GUISignals": ["./src/GameUI/signals"],
+      "@GUIUtils": ["./src/GameUI/utils"],
+
+      "@earthUtils": ["./src/scenes/EarthScene/utils"],
+      "@earthSignals": ["./src/scenes/EarthScene/signals"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",

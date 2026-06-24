@@ -2,7 +2,7 @@ import type {
   AmbientLightConfig,
   ArcRotateCameraConfig,
   SceneConfig,
-} from "@customTypes/types";
+} from "@globalTypes";
 
 export const SCENE_DEFAULTS: SceneConfig = {
   CLEAR: [0, 0, 0, 1],
@@ -14,7 +14,7 @@ export const CAMERA_DEFAULTS: ArcRotateCameraConfig = {
   BETA: Math.PI / 3 + 0.2,
   RADIUS_DESKTOP: 20,
   RADIUS_MOBILE: 12,
-  LOWER_RADIUS_LIMIT_DESKTOP: 10,
+  LOWER_RADIUS_LIMIT_DESKTOP: 0,
   LOWER_RADIUS_LIMIT_MOBILE: 5,
   UPPER_RADIUS_LIMIT_DESKTOP: 25,
   UPPER_RADIUS_LIMIT_MOBILE: 18,

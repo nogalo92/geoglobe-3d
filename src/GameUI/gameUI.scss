@@ -1,0 +1,26 @@
+.game-ui {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.game-ui__panel {
+  width: 320px;
+  margin: 24px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(10, 14, 24, 0.75);
+  color: white;
+  pointer-events: auto;
+  backdrop-filter: blur(12px);
+}
+
+.game-ui__form {
+  display: flex;
+  gap: 8px;
+
+  input {
+    flex: 1;
+  }
+}

@@ -1,76 +1,50 @@
-import {
-  MeshBuilder,
-  StandardMaterial,
-  Texture,
-  type ArcRotateCamera,
-} from "@babylonjs/core";
+import { type ArcRotateCamera } from "@babylonjs/core";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { Scene, type SceneEventArgs } from "react-babylonjs";
 import {
   AMBIENT_LIGHT_DEFAULTS,
   CAMERA_DEFAULTS,
   SCENE_DEFAULTS,
-} from "./globe.config";
+} from "./earth.config";
 import {
   hexToLinearColor3,
-  loadCountries,
-  renderCountryOutline,
   showInspector,
   toColor3,
   toColor4,
   toVector3,
-} from "@utils/utils";
-import { isSceneLoading } from "../../signals/signals";
+} from "@globalUtils";
 
-function GlobeScene() {
+import type { Country } from "@globalTypes";
+
+import { loadGameData, S_countries, startNewGame } from "@game";
+import { S_sceneLoading } from "@globalSignals";
+import { createEarth, renderCountryOutline } from "@earthUtils";
+import { useEffect } from "react";
+
+function EarthScene() {
+  useEffect(() => {
+    loadGameData().then(() => {
+      startNewGame();
+    });
+  }, []);
+
   const isMobile = useIsMobile(768);
   const isInspectorOn = import.meta.env.VITE_INSPECTOR === "on";
 
   const setupScene = async ({ scene }: SceneEventArgs) => {
     scene.clearColor = toColor4(SCENE_DEFAULTS.CLEAR);
 
-    const earth = MeshBuilder.CreateSphere(
-      "Earth",
-      { diameter: 10, segments: 64 },
-      scene,
-    );
-
-    earth.rotation.y = Math.PI;
-
-    const earthMaterial = new StandardMaterial("M_Earth", scene);
-    const earthTexture = new Texture(
-      "/assets/textures/earth_day_8k.jpg",
-    ) as Texture;
-
-    earthTexture.wAng = Math.PI;
-    earthTexture.vAng = 0.456;
-    earthMaterial.diffuseTexture = earthTexture;
-
-    earth.material = earthMaterial;
-
-    const countries = await loadCountries(
-      "/assets/geodata/ne_50mcountries.json",
-    );
-
-    const bosnia = countries.features.find(
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (feature: any) =>
-        feature.properties.NAME === "Philippines" ||
-        feature.properties.ADMIN === "Philippines",
-    );
-
-    if (bosnia) {
-      renderCountryOutline(bosnia, scene);
-    } else {
-      console.warn("Bosnia not found");
-    }
+    const earthRoot = createEarth(scene);
 
     scene.onReadyObservable.add(async () => {
+      S_countries.value.forEach((country: Country) => {
+        renderCountryOutline(country.feature, scene, earthRoot);
+      });
+
       if (isInspectorOn) {
         await showInspector(scene);
       }
-
-      isSceneLoading.value = false;
+      S_sceneLoading.value = false;
     });
   };
 
@@ -105,8 +79,8 @@ function GlobeScene() {
         }
         target={toVector3(CAMERA_DEFAULTS.TARGET)}
         minZ={CAMERA_DEFAULTS.MIN_Z}
-        wheelPrecision={CAMERA_DEFAULTS.PRECISION}
-        pinchPrecision={CAMERA_DEFAULTS.PRECISION}
+        // wheelPrecision={CAMERA_DEFAULTS.PRECISION}
+        // pinchPrecision={CAMERA_DEFAULTS.PRECISION}
         onCreated={(camera: ArcRotateCamera) => setupCamera(camera)}
       />
       <hemisphericLight
@@ -120,4 +94,4 @@ function GlobeScene() {
   );
 }
 
-export default GlobeScene;
+export default EarthScene;

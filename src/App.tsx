@@ -1,12 +1,17 @@
-import GlobeScene from "@scenes/GlobeScene/GlobeScene";
+import EarthScene from "@scenes/EarthScene/EarthScene";
 import "./App.css";
-import RenderingEngine from "@components/RenderingEngine/RenderingEngine";
+import RenderingEngine from "./RenderingEngine/RenderingEngine";
+import GameUI from "./GameUI/GameUI";
 
 function App() {
   return (
-    <RenderingEngine>
-      <GlobeScene />
-    </RenderingEngine>
+    <>
+      <RenderingEngine>
+        <EarthScene />
+      </RenderingEngine>
+
+      <GameUI />
+    </>
   );
 }
 
