@@ -1,5 +1,6 @@
 import type { CountriesGeoJson } from "@globalTypes";
 import type { Country, CountryFeature } from "@globalTypes";
+import { pointOnFeature } from "@turf/turf";
 
 export const loadCountries = async (
   path: string,
@@ -19,16 +20,21 @@ function createCountryId(name: string) {
 
 export const normalizeCountries = (features: CountryFeature[]): Country[] => {
   return features.map((feature) => {
-    const name =
-      feature.properties.NAME ?? feature.properties.ADMIN ?? "Unknown";
+    const name = String(
+      feature.properties.NAME ?? feature.properties.ADMIN ?? "Unknown",
+    );
+
+    const centerPoint = pointOnFeature(feature);
+
+    const [lon, lat] = centerPoint.geometry.coordinates;
 
     return {
       id: createCountryId(name),
       name,
       feature,
       center: {
-        lon: Number(feature.properties.LABEL_X ?? 0),
-        lat: Number(feature.properties.LABEL_Y ?? 0),
+        lon,
+        lat,
       },
     };
   });

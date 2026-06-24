@@ -6,6 +6,7 @@ import {
   S_secretCountry,
   S_selectedCountry,
 } from "./game.signals";
+import { rotateToCountry } from "@scenes/EarthScene/utils/earth.utils";
 
 export async function loadGameData() {
   const countryGeoJSON = await loadCountries("/assets/geodata/countries.json");
@@ -38,6 +39,8 @@ export const submitCountryGuess = (input: string) => {
   }
 
   S_selectedCountry.value = country;
+  console.log(country, country.center);
+  rotateToCountry(country);
 
   const alreadyGuessed = S_guessedCountries.value.some(
     (guess) => guess.id === country.id,

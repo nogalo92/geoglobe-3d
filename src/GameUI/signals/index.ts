@@ -1,1 +1,1 @@
-export * from "./gui.signals";
+export * from "./gameUI.signals";

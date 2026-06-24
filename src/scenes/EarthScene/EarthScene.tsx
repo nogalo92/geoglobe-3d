@@ -20,6 +20,7 @@ import { loadGameData, S_countries, startNewGame } from "@game";
 import { S_sceneLoading } from "@globalSignals";
 import { createEarth, renderCountryOutline } from "@earthUtils";
 import { useEffect } from "react";
+import { S_arcCamera, S_earthRoot } from "./signals/earth.signals";
 
 function EarthScene() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function EarthScene() {
     scene.clearColor = toColor4(SCENE_DEFAULTS.CLEAR);
 
     const earthRoot = createEarth(scene);
+    S_earthRoot.value = earthRoot;
 
     scene.onReadyObservable.add(async () => {
       S_countries.value.forEach((country: Country) => {
@@ -49,7 +51,7 @@ function EarthScene() {
   };
 
   const setupCamera = (camera: ArcRotateCamera) => {
-    console.log(camera);
+    S_arcCamera.value = camera;
   };
 
   return (

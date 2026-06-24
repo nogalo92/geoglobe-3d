@@ -1,1 +1,1 @@
-export * from "./gui.utils";
+export * from "./gameUI.utils";

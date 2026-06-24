@@ -12,8 +12,8 @@
 }
 
 .disable-highlight {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10 and Edge Legacy */
-  user-select: none; /* Standard syntax (Chrome, Edge, Opera) */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
