@@ -21,7 +21,7 @@
 
       "@countryUtils": ["./src/country-data/utils"],
       "@countryTypes": ["./src/country-data/types"],
-      "@countryRenderer": ["./src/country-data/renderers"],
+      "@countryRenderer": ["./src/country-data/renderers/CountryRenderer"],
       "@countryManagers": ["./src/country-data/managers"],
 
       "@globalSignals": ["./src/signals"],

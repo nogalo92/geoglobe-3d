@@ -1,17 +1,9 @@
-import { S_countries } from "@gameSignals";
-
 import { loadCountriesData } from "@countryUtils";
-import type { CountriesGeoJson } from "@countryTypes";
+import type { CountriesGeoJson, CountryFeature } from "@countryTypes";
 import { toRadians } from "@globalUtils";
 
 export async function loadGameData(): Promise<CountriesGeoJson> {
-  const countryGeoJSON = await loadCountriesData(
-    "/data/processed/countries.geojson",
-  );
-
-  S_countries.value = countryGeoJSON.features;
-
-  return countryGeoJSON;
+  return loadCountriesData("/data/processed/countries.geojson");
 }
 
 export const getDistanceKm = (
@@ -37,3 +29,15 @@ export const getDistanceKm = (
     earthRadiusKm * 2 * Math.atan2(Math.sqrt(h), Math.sqrt(1 - h)),
   );
 };
+
+export const getCountryDistanceKm = (
+  a: CountryFeature,
+  b: CountryFeature,
+): number => {
+  return getDistanceKm(a.properties.centroid, b.properties.centroid);
+};
+
+const MAX_WORLD_DISTANCE_KM = 20037;
+export function getDistanceRatio(distanceKm: number): number {
+  return Math.min(distanceKm / MAX_WORLD_DISTANCE_KM, 1);
+}

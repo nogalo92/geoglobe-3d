@@ -2,17 +2,23 @@ import { signal } from "@preact/signals-react";
 import type { CountryFeature } from "@countryTypes";
 import type { CountryManager } from "@countryManagers";
 import type { GuessResult } from "@gameTypes";
-import { getDistanceKm } from "@gameUtils";
+import { getCountryDistanceKm, getDistanceRatio } from "@gameUtils";
+import type { CountryRenderer } from "@countryRenderer";
 
 export class GameManager {
   private countryManager: CountryManager;
+  private countryRenderer: CountryRenderer;
 
   readonly targetCountry = signal<CountryFeature | null>(null);
   readonly selectedCountry = signal<CountryFeature | null>(null);
   readonly guesses = signal<GuessResult[]>([]);
 
-  constructor(countryManager: CountryManager) {
+  constructor(
+    countryManager: CountryManager,
+    countryRenderer: CountryRenderer,
+  ) {
     this.countryManager = countryManager;
+    this.countryRenderer = countryRenderer;
   }
 
   startNewGame(): void {
@@ -26,37 +32,29 @@ export class GameManager {
   }
 
   submitGuess(input: string): GuessResult | null {
-    const target = this.targetCountry.value;
-
-    if (!target) {
-      throw new Error("Game has not started.");
-    }
-
     const guessedCountry = this.countryManager.findByAlias(input);
+    if (!guessedCountry) return null;
 
-    if (!guessedCountry || !guessedCountry.properties.playable) {
-      return null;
-    }
+    const targetCountry = this.targetCountry.value;
+    if (!targetCountry) return null;
 
-    const alreadyGuessed = this.guesses.value.some(
-      (guess) => guess.country.properties.id === guessedCountry.properties.id,
-    );
+    const distanceKm = getCountryDistanceKm(guessedCountry, targetCountry);
 
-    if (alreadyGuessed) {
-      return null;
-    }
+    const distanceRatio = getDistanceRatio(distanceKm);
 
-    const result: GuessResult = {
+    this.countryRenderer.markGuess(guessedCountry, distanceRatio);
+
+    const isCorrect =
+      guessedCountry.properties.id === targetCountry.properties.id;
+
+    const result = {
       country: guessedCountry,
-      distanceKm: getDistanceKm(
-        guessedCountry.properties.centroid,
-        target.properties.centroid,
-      ),
-      isCorrect: guessedCountry.properties.id === target.properties.id,
+      distanceKm,
+      distanceRatio,
+      isCorrect,
     };
 
     this.guesses.value = [...this.guesses.value, result];
-    this.selectedCountry.value = guessedCountry;
 
     return result;
   }

@@ -1,3 +1,11 @@
+import type {
+  Color3,
+  LinesMesh,
+  Mesh,
+  StandardMaterial,
+  TransformNode,
+  Vector3,
+} from "@babylonjs/core";
 import type { Feature, MultiPolygon, Polygon } from "geojson";
 
 export type CountryId = string;
@@ -87,4 +95,36 @@ export type CountryReviewItem = {
   areaKm2: number;
   bounds: CountryProperties["bounds"];
   aliases: string[];
+};
+
+export type CountryVisualState = {
+  id: string;
+  root: TransformNode;
+
+  fillMesh?: Mesh;
+  markerMesh?: Mesh;
+  outlineMesh?: LinesMesh;
+
+  fillMaterial?: StandardMaterial;
+  markerMaterial?: StandardMaterial;
+
+  isGuessed: boolean;
+
+  fillAlpha: number;
+  targetFillAlpha: number;
+
+  fillColor: Color3;
+  targetFillColor: Color3;
+
+  outlineAlpha: number;
+  targetOutlineAlpha: number;
+
+  outlineColor: Color3;
+  targetOutlineColor: Color3;
+
+  pulseProgress: number;
+
+  lift: number;
+  targetLift: number;
+  liftNormal: Vector3;
 };

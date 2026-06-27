@@ -4,4 +4,5 @@ export type GuessResult = {
   country: CountryFeature;
   distanceKm: number;
   isCorrect: boolean;
+  distanceRatio: number;
 };

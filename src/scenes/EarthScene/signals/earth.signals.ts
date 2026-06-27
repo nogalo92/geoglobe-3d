@@ -1,6 +1,6 @@
 import type { ArcRotateCamera, TransformNode } from "@babylonjs/core";
 import type { CountryManager } from "@countryManagers";
-import type { CountryRenderer } from "@countryRenderer";
+import type { CountryRenderer } from "../../../country-data/renderers/CountryRenderer";
 import { signal } from "@preact/signals-react";
 
 export const S_earthRoot = signal<TransformNode | null>(null);
