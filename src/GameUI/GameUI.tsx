@@ -1,15 +1,13 @@
 import { useState, type SubmitEvent } from "react";
 
-import {
-  S_guessedCountries,
-  S_selectedCountry,
-  S_secretCountry,
-  submitCountryGuess,
-  startNewGame,
-} from "@game";
-
 import "./gameUI.scss";
 import { useSignalValue } from "@hooks/useSignalValue";
+import {
+  S_guessedCountries,
+  S_secretCountry,
+  S_selectedCountry,
+} from "@gameSignals";
+import { startNewGame, submitCountryGuess } from "@gameUtils";
 
 function GameUI() {
   const [input, setInput] = useState("");
@@ -43,7 +41,9 @@ function GameUI() {
           <button type="submit">Guess</button>
         </form>
 
-        {selectedCountry && <p>Selected: {selectedCountry.name}</p>}
+        {selectedCountry && (
+          <p>Selected: {selectedCountry.properties.displayName}</p>
+        )}
 
         <button type="button" onClick={startNewGame}>
           New Game
@@ -53,12 +53,12 @@ function GameUI() {
           <h2>Guesses</h2>
 
           {guesses.map((guess) => (
-            <div key={guess.id}>{guess.name}</div>
+            <div key={guess.properties.id}>{guess.properties.displayName}</div>
           ))}
         </div>
 
         {import.meta.env.DEV && secretCountry && (
-          <p>Debug secret: {secretCountry.name}</p>
+          <p>Debug secret: {secretCountry.properties.displayName}</p>
         )}
       </div>
     </div>

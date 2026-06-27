@@ -2,7 +2,7 @@ import type {
   AmbientLightConfig,
   ArcRotateCameraConfig,
   SceneConfig,
-} from "@globalTypes";
+} from "@earthTypes";
 
 export const SCENE_DEFAULTS: SceneConfig = {
   CLEAR: [0, 0, 0, 1],
@@ -21,6 +21,7 @@ export const CAMERA_DEFAULTS: ArcRotateCameraConfig = {
   TARGET: [0, 0, 0],
   MIN_Z: 0.2,
   PRECISION: 10,
+  PANNING: 0,
 };
 
 export const AMBIENT_LIGHT_DEFAULTS: AmbientLightConfig = {

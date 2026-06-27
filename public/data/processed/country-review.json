@@ -1,0 +1,3571 @@
+[
+  {
+    "id": "VAT",
+    "index": 186,
+    "displayName": "Vatican",
+    "dataName": "Vatican",
+    "iso2": "VA",
+    "playable": true,
+    "areaKm2": 0.41,
+    "bounds": [
+      12.4275,
+      41.8984,
+      12.4392,
+      41.9062
+    ],
+    "aliases": [
+      "Vatican"
+    ]
+  },
+  {
+    "id": "MCO",
+    "index": 107,
+    "displayName": "Monaco",
+    "dataName": "Monaco",
+    "iso2": "MC",
+    "playable": true,
+    "areaKm2": 9.75,
+    "bounds": [
+      7.3777,
+      43.7317,
+      7.4387,
+      43.7653
+    ],
+    "aliases": [
+      "Monaco"
+    ]
+  },
+  {
+    "id": "TUV",
+    "index": 178,
+    "displayName": "Tuvalu",
+    "dataName": "Tuvalu",
+    "playable": true,
+    "areaKm2": 15.08,
+    "bounds": [
+      176.0591,
+      -9.429,
+      179.8703,
+      -5.6428
+    ],
+    "aliases": [
+      "Tuvalu"
+    ]
+  },
+  {
+    "id": "NRU",
+    "index": 131,
+    "displayName": "Nauru",
+    "dataName": "Nauru",
+    "iso2": "NR",
+    "playable": true,
+    "areaKm2": 25.91,
+    "bounds": [
+      166.907,
+      -0.5508,
+      166.9584,
+      -0.4894
+    ],
+    "aliases": [
+      "Nauru"
+    ]
+  },
+  {
+    "id": "MDV",
+    "index": 110,
+    "displayName": "Maldives",
+    "dataName": "Maldives",
+    "iso2": "MV",
+    "playable": true,
+    "areaKm2": 55.07,
+    "bounds": [
+      73.385,
+      3.2294,
+      73.5283,
+      4.2477
+    ],
+    "aliases": [
+      "Maldives"
+    ]
+  },
+  {
+    "id": "SMR",
+    "index": 156,
+    "displayName": "San Marino",
+    "dataName": "San Marino",
+    "iso2": "SM",
+    "playable": true,
+    "areaKm2": 68.22,
+    "bounds": [
+      12.3969,
+      43.8941,
+      12.5146,
+      43.9897
+    ],
+    "aliases": [
+      "San Marino"
+    ]
+  },
+  {
+    "id": "LIE",
+    "index": 100,
+    "displayName": "Liechtenstein",
+    "dataName": "Liechtenstein",
+    "iso2": "LI",
+    "playable": true,
+    "areaKm2": 131.31,
+    "bounds": [
+      9.4843,
+      47.0574,
+      9.6105,
+      47.2708
+    ],
+    "aliases": [
+      "Liechtenstein"
+    ]
+  },
+  {
+    "id": "SYC",
+    "index": 166,
+    "displayName": "Seychelles",
+    "dataName": "Seychelles",
+    "iso2": "SC",
+    "playable": true,
+    "areaKm2": 167.18,
+    "bounds": [
+      55.3834,
+      -4.7855,
+      55.543,
+      -4.5588
+    ],
+    "aliases": [
+      "Seychelles"
+    ]
+  },
+  {
+    "id": "MHL",
+    "index": 112,
+    "displayName": "Marshall Islands",
+    "dataName": "Marshall Islands",
+    "iso2": "MH",
+    "playable": true,
+    "areaKm2": 220.1,
+    "bounds": [
+      166.8447,
+      5.7998,
+      171.7568,
+      11.1687
+    ],
+    "aliases": [
+      "Marshall Islands"
+    ]
+  },
+  {
+    "id": "KNA",
+    "index": 92,
+    "displayName": "Saint Kitts and Nevis",
+    "dataName": "Saint Kitts and Nevis",
+    "iso2": "KN",
+    "playable": true,
+    "areaKm2": 233.02,
+    "bounds": [
+      -62.8389,
+      17.1006,
+      -62.5322,
+      17.4026
+    ],
+    "aliases": [
+      "Saint Kitts and Nevis"
+    ]
+  },
+  {
+    "id": "MLT",
+    "index": 115,
+    "displayName": "Malta",
+    "dataName": "Malta",
+    "iso2": "MT",
+    "playable": true,
+    "areaKm2": 264.15,
+    "bounds": [
+      14.1804,
+      35.8202,
+      14.5662,
+      36.0758
+    ],
+    "aliases": [
+      "Malta"
+    ]
+  },
+  {
+    "id": "GRD",
+    "index": 69,
+    "displayName": "Grenada",
+    "dataName": "Grenada",
+    "iso2": "GD",
+    "playable": true,
+    "areaKm2": 286.19,
+    "bounds": [
+      -61.7822,
+      12.0084,
+      -61.607,
+      12.237
+    ],
+    "aliases": [
+      "Grenada"
+    ]
+  },
+  {
+    "id": "VCT",
+    "index": 187,
+    "displayName": "Saint Vincent and the Grenadines",
+    "dataName": "Saint Vincent and the Grenadines",
+    "iso2": "VC",
+    "playable": true,
+    "areaKm2": 307.28,
+    "bounds": [
+      -61.3535,
+      12.6952,
+      -61.124,
+      13.3587
+    ],
+    "aliases": [
+      "Saint Vincent and the Grenadines",
+      "Saint Vincent and Grenadines"
+    ]
+  },
+  {
+    "id": "PLW",
+    "index": 138,
+    "displayName": "Palau",
+    "dataName": "Palau",
+    "iso2": "PW",
+    "playable": true,
+    "areaKm2": 335.29,
+    "bounds": [
+      131.135,
+      3.0252,
+      134.6596,
+      7.7121
+    ],
+    "aliases": [
+      "Palau"
+    ]
+  },
+  {
+    "id": "BRB",
+    "index": 24,
+    "displayName": "Barbados",
+    "dataName": "Barbados",
+    "iso2": "BB",
+    "playable": true,
+    "areaKm2": 389.34,
+    "bounds": [
+      -59.6467,
+      13.0622,
+      -59.4276,
+      13.3177
+    ],
+    "aliases": [
+      "Barbados"
+    ]
+  },
+  {
+    "id": "TON",
+    "index": 174,
+    "displayName": "Tonga",
+    "dataName": "Tonga",
+    "iso2": "TO",
+    "playable": true,
+    "areaKm2": 421.07,
+    "bounds": [
+      -175.3624,
+      -21.4506,
+      -173.9219,
+      -18.5653
+    ],
+    "aliases": [
+      "Tonga"
+    ]
+  },
+  {
+    "id": "ATG",
+    "index": 7,
+    "displayName": "Antigua and Barbuda",
+    "dataName": "Antigua and Barbuda",
+    "iso2": "AG",
+    "playable": true,
+    "areaKm2": 430.56,
+    "bounds": [
+      -61.8871,
+      16.9972,
+      -61.686,
+      17.7141
+    ],
+    "aliases": [
+      "Antigua and Barbuda"
+    ]
+  },
+  {
+    "id": "AND",
+    "index": 3,
+    "displayName": "Andorra",
+    "dataName": "Andorra",
+    "iso2": "AD",
+    "playable": true,
+    "areaKm2": 434.72,
+    "bounds": [
+      1.4148,
+      42.4345,
+      1.7395,
+      42.6427
+    ],
+    "aliases": [
+      "Andorra"
+    ]
+  },
+  {
+    "id": "SGP",
+    "index": 152,
+    "displayName": "Singapore",
+    "dataName": "Singapore",
+    "iso2": "SG",
+    "playable": true,
+    "areaKm2": 469.77,
+    "bounds": [
+      103.6502,
+      1.2654,
+      103.9964,
+      1.4471
+    ],
+    "aliases": [
+      "Singapore"
+    ]
+  },
+  {
+    "id": "FSM",
+    "index": 59,
+    "displayName": "Federated States of Micronesia",
+    "dataName": "Federated States of Micronesia",
+    "iso2": "FM",
+    "playable": true,
+    "areaKm2": 510.62,
+    "bounds": [
+      138.0619,
+      5.2772,
+      162.9935,
+      9.5933
+    ],
+    "aliases": [
+      "Federated States of Micronesia",
+      "Micronesia"
+    ]
+  },
+  {
+    "id": "BHR",
+    "index": 17,
+    "displayName": "Bahrain",
+    "dataName": "Bahrain",
+    "iso2": "BH",
+    "playable": true,
+    "areaKm2": 524.42,
+    "bounds": [
+      50.4524,
+      25.8068,
+      50.6098,
+      26.2407
+    ],
+    "aliases": [
+      "Bahrain"
+    ]
+  },
+  {
+    "id": "LCA",
+    "index": 99,
+    "displayName": "Saint Lucia",
+    "dataName": "Saint Lucia",
+    "iso2": "LC",
+    "playable": true,
+    "areaKm2": 544.09,
+    "bounds": [
+      -61.0731,
+      13.7176,
+      -60.8868,
+      14.0934
+    ],
+    "aliases": [
+      "Saint Lucia"
+    ]
+  },
+  {
+    "id": "DMA",
+    "index": 46,
+    "displayName": "Dominica",
+    "dataName": "Dominica",
+    "iso2": "DM",
+    "playable": true,
+    "areaKm2": 694.41,
+    "bounds": [
+      -61.4812,
+      15.2273,
+      -61.2511,
+      15.6331
+    ],
+    "aliases": [
+      "Dominica"
+    ]
+  },
+  {
+    "id": "KIR",
+    "index": 91,
+    "displayName": "Kiribati",
+    "dataName": "Kiribati",
+    "iso2": "KI",
+    "playable": true,
+    "areaKm2": 907.52,
+    "bounds": [
+      -174.5408,
+      -11.4568,
+      174.7789,
+      3.9235
+    ],
+    "aliases": [
+      "Kiribati"
+    ]
+  },
+  {
+    "id": "STP",
+    "index": 160,
+    "displayName": "São Tomé and Principe",
+    "dataName": "São Tomé and Principe",
+    "iso2": "ST",
+    "playable": true,
+    "areaKm2": 971.59,
+    "bounds": [
+      6.4682,
+      0.0474,
+      7.4523,
+      1.6991
+    ],
+    "aliases": [
+      "São Tomé and Principe"
+    ]
+  },
+  {
+    "id": "COM",
+    "index": 38,
+    "displayName": "Comoros",
+    "dataName": "Comoros",
+    "iso2": "KM",
+    "playable": true,
+    "areaKm2": 1578.58,
+    "bounds": [
+      43.2267,
+      -12.3683,
+      44.5268,
+      -11.3685
+    ],
+    "aliases": [
+      "Comoros"
+    ]
+  },
+  {
+    "id": "MUS",
+    "index": 121,
+    "displayName": "Mauritius",
+    "dataName": "Mauritius",
+    "iso2": "MU",
+    "playable": true,
+    "areaKm2": 1875.67,
+    "bounds": [
+      57.3177,
+      -20.5132,
+      57.792,
+      -19.9899
+    ],
+    "aliases": [
+      "Mauritius"
+    ]
+  },
+  {
+    "id": "LUX",
+    "index": 104,
+    "displayName": "Luxembourg",
+    "dataName": "Luxembourg",
+    "iso2": "LU",
+    "playable": true,
+    "areaKm2": 2622.74,
+    "bounds": [
+      5.725,
+      49.4455,
+      6.4873,
+      50.1672
+    ],
+    "aliases": [
+      "Luxembourg"
+    ]
+  },
+  {
+    "id": "WSM",
+    "index": 191,
+    "displayName": "Samoa",
+    "dataName": "Samoa",
+    "iso2": "WS",
+    "playable": true,
+    "areaKm2": 2699.1,
+    "bounds": [
+      -172.7785,
+      -14.0473,
+      -171.4541,
+      -13.4652
+    ],
+    "aliases": [
+      "Samoa"
+    ]
+  },
+  {
+    "id": "CPV",
+    "index": 39,
+    "displayName": "Republic of Cabo Verde",
+    "dataName": "Republic of Cabo Verde",
+    "iso2": "CV",
+    "playable": true,
+    "areaKm2": 3584.39,
+    "bounds": [
+      -25.3371,
+      14.8182,
+      -22.6819,
+      17.1937
+    ],
+    "aliases": [
+      "Republic of Cabo Verde",
+      "Cabo Verde",
+      "Cape Verde"
+    ]
+  },
+  {
+    "id": "TTO",
+    "index": 175,
+    "displayName": "Trinidad and Tobago",
+    "dataName": "Trinidad and Tobago",
+    "iso2": "TT",
+    "playable": true,
+    "areaKm2": 5088.41,
+    "bounds": [
+      -61.9061,
+      10.0646,
+      -60.5255,
+      11.3254
+    ],
+    "aliases": [
+      "Trinidad and Tobago"
+    ]
+  },
+  {
+    "id": "BRN",
+    "index": 25,
+    "displayName": "Brunei Darussalam",
+    "dataName": "Brunei Darussalam",
+    "iso2": "BN",
+    "playable": true,
+    "areaKm2": 5616.72,
+    "bounds": [
+      114.0639,
+      4.024,
+      115.3268,
+      5.0224
+    ],
+    "aliases": [
+      "Brunei Darussalam",
+      "Brunei"
+    ]
+  },
+  {
+    "id": "CYP",
+    "index": 42,
+    "displayName": "Cyprus",
+    "dataName": "Cyprus",
+    "iso2": "CY",
+    "playable": true,
+    "areaKm2": 5667.3,
+    "bounds": [
+      32.301,
+      34.5696,
+      34.0502,
+      35.1827
+    ],
+    "aliases": [
+      "Cyprus"
+    ]
+  },
+  {
+    "id": "PSE",
+    "index": 144,
+    "displayName": "Palestine",
+    "dataName": "Palestine",
+    "iso2": "PS",
+    "playable": true,
+    "areaKm2": 6330.39,
+    "bounds": [
+      34.1981,
+      31.2083,
+      35.5721,
+      32.5344
+    ],
+    "aliases": [
+      "Palestine"
+    ]
+  },
+  {
+    "id": "LBN",
+    "index": 96,
+    "displayName": "Lebanon",
+    "dataName": "Lebanon",
+    "iso2": "LB",
+    "playable": true,
+    "areaKm2": 10027.61,
+    "bounds": [
+      35.1086,
+      33.0757,
+      36.585,
+      34.6787
+    ],
+    "aliases": [
+      "Lebanon"
+    ]
+  },
+  {
+    "id": "GMB",
+    "index": 65,
+    "displayName": "The Gambia",
+    "dataName": "The Gambia",
+    "iso2": "GM",
+    "playable": true,
+    "areaKm2": 10330.13,
+    "bounds": [
+      -16.8248,
+      13.0642,
+      -13.8267,
+      13.8121
+    ],
+    "aliases": [
+      "The Gambia",
+      "Gambia"
+    ]
+  },
+  {
+    "id": "JAM",
+    "index": 84,
+    "displayName": "Jamaica",
+    "dataName": "Jamaica",
+    "iso2": "JM",
+    "playable": true,
+    "areaKm2": 10898.81,
+    "bounds": [
+      -78.3395,
+      17.7149,
+      -76.2108,
+      18.5222
+    ],
+    "aliases": [
+      "Jamaica"
+    ]
+  },
+  {
+    "id": "XKX",
+    "index": 192,
+    "displayName": "Kosovo",
+    "dataName": "Kosovo",
+    "iso2": "XK",
+    "playable": true,
+    "areaKm2": 10936.71,
+    "bounds": [
+      20.0295,
+      41.8538,
+      21.7529,
+      43.2611
+    ],
+    "aliases": [
+      "Kosovo"
+    ]
+  },
+  {
+    "id": "QAT",
+    "index": 145,
+    "displayName": "Qatar",
+    "dataName": "Qatar",
+    "iso2": "QA",
+    "playable": true,
+    "areaKm2": 11073.64,
+    "bounds": [
+      50.7546,
+      24.5646,
+      51.6089,
+      26.1533
+    ],
+    "aliases": [
+      "Qatar"
+    ]
+  },
+  {
+    "id": "VUT",
+    "index": 190,
+    "displayName": "Vanuatu",
+    "dataName": "Vanuatu",
+    "iso2": "VU",
+    "playable": true,
+    "areaKm2": 11285.78,
+    "bounds": [
+      166.5261,
+      -20.2418,
+      169.8963,
+      -13.7095
+    ],
+    "aliases": [
+      "Vanuatu"
+    ]
+  },
+  {
+    "id": "BHS",
+    "index": 18,
+    "displayName": "Bahamas",
+    "dataName": "Bahamas",
+    "iso2": "BS",
+    "playable": true,
+    "areaKm2": 12625.67,
+    "bounds": [
+      -78.9856,
+      20.9374,
+      -72.7473,
+      26.9401
+    ],
+    "aliases": [
+      "Bahamas"
+    ]
+  },
+  {
+    "id": "MNE",
+    "index": 117,
+    "displayName": "Montenegro",
+    "dataName": "Montenegro",
+    "iso2": "ME",
+    "playable": true,
+    "areaKm2": 13627.7,
+    "bounds": [
+      18.4363,
+      41.8691,
+      20.3443,
+      43.5423
+    ],
+    "aliases": [
+      "Montenegro"
+    ]
+  },
+  {
+    "id": "TLS",
+    "index": 173,
+    "displayName": "Timor-Leste",
+    "dataName": "Timor-Leste",
+    "iso2": "TL",
+    "playable": true,
+    "areaKm2": 15051.4,
+    "bounds": [
+      124.0363,
+      -9.5119,
+      127.2961,
+      -8.1399
+    ],
+    "aliases": [
+      "Timor-Leste"
+    ]
+  },
+  {
+    "id": "SWZ",
+    "index": 165,
+    "displayName": "Eswatini",
+    "dataName": "Swaziland",
+    "iso2": "SZ",
+    "playable": true,
+    "areaKm2": 16992.06,
+    "bounds": [
+      30.7891,
+      -27.3059,
+      32.1129,
+      -25.743
+    ],
+    "aliases": [
+      "Eswatini",
+      "Swaziland"
+    ]
+  },
+  {
+    "id": "KWT",
+    "index": 94,
+    "displayName": "Kuwait",
+    "dataName": "Kuwait",
+    "iso2": "KW",
+    "playable": true,
+    "areaKm2": 17306.82,
+    "bounds": [
+      46.5314,
+      28.5332,
+      48.4425,
+      30.0973
+    ],
+    "aliases": [
+      "Kuwait"
+    ]
+  },
+  {
+    "id": "FJI",
+    "index": 57,
+    "displayName": "Fiji",
+    "dataName": "Fiji",
+    "iso2": "FJ",
+    "playable": true,
+    "areaKm2": 17859.7,
+    "bounds": [
+      -180,
+      -19.1517,
+      180,
+      -16.1529
+    ],
+    "aliases": [
+      "Fiji"
+    ]
+  },
+  {
+    "id": "SVN",
+    "index": 163,
+    "displayName": "Slovenia",
+    "dataName": "Slovenia",
+    "iso2": "SI",
+    "playable": true,
+    "areaKm2": 20192.18,
+    "bounds": [
+      13.3782,
+      45.4284,
+      16.5162,
+      46.8633
+    ],
+    "aliases": [
+      "Slovenia"
+    ]
+  },
+  {
+    "id": "SLV",
+    "index": 155,
+    "displayName": "El Salvador",
+    "dataName": "El Salvador",
+    "iso2": "SV",
+    "playable": true,
+    "areaKm2": 20342.86,
+    "bounds": [
+      -90.1047,
+      13.164,
+      -87.7153,
+      14.4311
+    ],
+    "aliases": [
+      "El Salvador"
+    ]
+  },
+  {
+    "id": "DJI",
+    "index": 45,
+    "displayName": "Djibouti",
+    "dataName": "Djibouti",
+    "iso2": "DJ",
+    "playable": true,
+    "areaKm2": 21683.73,
+    "bounds": [
+      41.7646,
+      10.941,
+      43.4098,
+      12.7086
+    ],
+    "aliases": [
+      "Djibouti"
+    ]
+  },
+  {
+    "id": "ISR",
+    "index": 82,
+    "displayName": "Israel",
+    "dataName": "Israel",
+    "iso2": "IL",
+    "playable": true,
+    "areaKm2": 22356.78,
+    "bounds": [
+      34.2453,
+      29.4773,
+      35.9135,
+      33.4317
+    ],
+    "aliases": [
+      "Israel"
+    ]
+  },
+  {
+    "id": "BLZ",
+    "index": 21,
+    "displayName": "Belize",
+    "dataName": "Belize",
+    "iso2": "BZ",
+    "playable": true,
+    "areaKm2": 22638.67,
+    "bounds": [
+      -89.2375,
+      15.8906,
+      -87.8485,
+      18.4768
+    ],
+    "aliases": [
+      "Belize"
+    ]
+  },
+  {
+    "id": "RWA",
+    "index": 148,
+    "displayName": "Rwanda",
+    "dataName": "Rwanda",
+    "iso2": "RW",
+    "playable": true,
+    "areaKm2": 25377.39,
+    "bounds": [
+      28.8576,
+      -2.8086,
+      30.8766,
+      -1.0631
+    ],
+    "aliases": [
+      "Rwanda"
+    ]
+  },
+  {
+    "id": "MKD",
+    "index": 113,
+    "displayName": "North Macedonia",
+    "dataName": "Macedonia",
+    "iso2": "MK",
+    "playable": true,
+    "areaKm2": 25384.49,
+    "bounds": [
+      20.4486,
+      40.8499,
+      23.0057,
+      42.3582
+    ],
+    "aliases": [
+      "North Macedonia",
+      "Macedonia"
+    ]
+  },
+  {
+    "id": "SLB",
+    "index": 153,
+    "displayName": "Solomon Islands",
+    "dataName": "Solomon Islands",
+    "iso2": "SB",
+    "playable": true,
+    "areaKm2": 25454.13,
+    "bounds": [
+      155.6775,
+      -11.8322,
+      166.9292,
+      -6.6089
+    ],
+    "aliases": [
+      "Solomon Islands"
+    ]
+  },
+  {
+    "id": "GNQ",
+    "index": 67,
+    "displayName": "Equatorial Guinea",
+    "dataName": "Equatorial Guinea",
+    "iso2": "GQ",
+    "playable": true,
+    "areaKm2": 26624.89,
+    "bounds": [
+      8.4343,
+      0.9601,
+      11.3354,
+      3.7583
+    ],
+    "aliases": [
+      "Equatorial Guinea"
+    ]
+  },
+  {
+    "id": "HTI",
+    "index": 74,
+    "displayName": "Haiti",
+    "dataName": "Haiti",
+    "iso2": "HT",
+    "playable": true,
+    "areaKm2": 26785.25,
+    "bounds": [
+      -74.4781,
+      18.0392,
+      -71.6453,
+      20.0919
+    ],
+    "aliases": [
+      "Haiti"
+    ]
+  },
+  {
+    "id": "BDI",
+    "index": 11,
+    "displayName": "Burundi",
+    "dataName": "Burundi",
+    "iso2": "BI",
+    "playable": true,
+    "areaKm2": 27274.77,
+    "bounds": [
+      29.0144,
+      -4.4559,
+      30.8114,
+      -2.313
+    ],
+    "aliases": [
+      "Burundi"
+    ]
+  },
+  {
+    "id": "ALB",
+    "index": 2,
+    "displayName": "Albania",
+    "dataName": "Albania",
+    "iso2": "AL",
+    "playable": true,
+    "areaKm2": 28360.02,
+    "bounds": [
+      19.2807,
+      39.6535,
+      21.0311,
+      42.6479
+    ],
+    "aliases": [
+      "Albania"
+    ]
+  },
+  {
+    "id": "ARM",
+    "index": 6,
+    "displayName": "Armenia",
+    "dataName": "Armenia",
+    "iso2": "AM",
+    "playable": true,
+    "areaKm2": 29553.04,
+    "bounds": [
+      43.4395,
+      38.869,
+      46.5848,
+      41.291
+    ],
+    "aliases": [
+      "Armenia"
+    ]
+  },
+  {
+    "id": "LSO",
+    "index": 102,
+    "displayName": "Lesotho",
+    "dataName": "Lesotho",
+    "iso2": "LS",
+    "playable": true,
+    "areaKm2": 30011.58,
+    "bounds": [
+      27.0518,
+      -30.6423,
+      29.3907,
+      -28.5817
+    ],
+    "aliases": [
+      "Lesotho"
+    ]
+  },
+  {
+    "id": "BEL",
+    "index": 12,
+    "displayName": "Belgium",
+    "dataName": "Belgium",
+    "iso2": "BE",
+    "playable": true,
+    "areaKm2": 30628.72,
+    "bounds": [
+      2.5249,
+      49.5109,
+      6.3645,
+      51.4911
+    ],
+    "aliases": [
+      "Belgium"
+    ]
+  },
+  {
+    "id": "GNB",
+    "index": 66,
+    "displayName": "Guinea-Bissau",
+    "dataName": "Guinea-Bissau",
+    "iso2": "GW",
+    "playable": true,
+    "areaKm2": 31748.6,
+    "bounds": [
+      -16.7118,
+      10.9401,
+      -13.6735,
+      12.6799
+    ],
+    "aliases": [
+      "Guinea-Bissau"
+    ]
+  },
+  {
+    "id": "MDA",
+    "index": 108,
+    "displayName": "Moldova",
+    "dataName": "Moldova",
+    "iso2": "MD",
+    "playable": true,
+    "areaKm2": 33125.53,
+    "bounds": [
+      26.6189,
+      45.4504,
+      30.1311,
+      48.4777
+    ],
+    "aliases": [
+      "Moldova"
+    ]
+  },
+  {
+    "id": "TWN",
+    "index": 179,
+    "displayName": "Taiwan",
+    "dataName": "Taiwan",
+    "iso2": "TW",
+    "playable": true,
+    "areaKm2": 35845.83,
+    "bounds": [
+      120.0725,
+      21.925,
+      121.929,
+      25.2769
+    ],
+    "aliases": [
+      "Taiwan"
+    ]
+  },
+  {
+    "id": "NLD",
+    "index": 128,
+    "displayName": "Netherlands",
+    "dataName": "Netherlands",
+    "iso2": "NL",
+    "playable": true,
+    "areaKm2": 36778.63,
+    "bounds": [
+      -68.3711,
+      12.0321,
+      7.1973,
+      53.4412
+    ],
+    "aliases": [
+      "Netherlands"
+    ]
+  },
+  {
+    "id": "BTN",
+    "index": 26,
+    "displayName": "Bhutan",
+    "dataName": "Bhutan",
+    "iso2": "BT",
+    "playable": true,
+    "areaKm2": 39888.08,
+    "bounds": [
+      88.7388,
+      26.7016,
+      92.0834,
+      28.3112
+    ],
+    "aliases": [
+      "Bhutan"
+    ]
+  },
+  {
+    "id": "CHE",
+    "index": 30,
+    "displayName": "Switzerland",
+    "dataName": "Switzerland",
+    "iso2": "CH",
+    "playable": true,
+    "areaKm2": 41226.44,
+    "bounds": [
+      5.97,
+      45.83,
+      10.4546,
+      47.7756
+    ],
+    "aliases": [
+      "Switzerland"
+    ]
+  },
+  {
+    "id": "DNK",
+    "index": 47,
+    "displayName": "Denmark",
+    "dataName": "Denmark",
+    "iso2": "DK",
+    "playable": true,
+    "areaKm2": 41918.33,
+    "bounds": [
+      8.1215,
+      54.6289,
+      15.1371,
+      57.7369
+    ],
+    "aliases": [
+      "Denmark"
+    ]
+  },
+  {
+    "id": "EST",
+    "index": 54,
+    "displayName": "Estonia",
+    "dataName": "Estonia",
+    "iso2": "EE",
+    "playable": true,
+    "areaKm2": 45287.7,
+    "bounds": [
+      21.8545,
+      57.5281,
+      28.1511,
+      59.639
+    ],
+    "aliases": [
+      "Estonia"
+    ]
+  },
+  {
+    "id": "SVK",
+    "index": 162,
+    "displayName": "Slovakia",
+    "dataName": "Slovakia",
+    "iso2": "SK",
+    "playable": true,
+    "areaKm2": 48389.88,
+    "bounds": [
+      16.8627,
+      47.7634,
+      22.5387,
+      49.5977
+    ],
+    "aliases": [
+      "Slovakia"
+    ]
+  },
+  {
+    "id": "DOM",
+    "index": 48,
+    "displayName": "Dominican Republic",
+    "dataName": "Dominican Republic",
+    "iso2": "DO",
+    "playable": true,
+    "areaKm2": 48612.13,
+    "bounds": [
+      -72.0004,
+      17.6356,
+      -68.3392,
+      19.914
+    ],
+    "aliases": [
+      "Dominican Republic"
+    ]
+  },
+  {
+    "id": "CRI",
+    "index": 40,
+    "displayName": "Costa Rica",
+    "dataName": "Costa Rica",
+    "iso2": "CR",
+    "playable": true,
+    "areaKm2": 51528.57,
+    "bounds": [
+      -85.908,
+      8.0707,
+      -82.5636,
+      11.1895
+    ],
+    "aliases": [
+      "Costa Rica"
+    ]
+  },
+  {
+    "id": "BIH",
+    "index": 19,
+    "displayName": "Bosnia and Herzegovina",
+    "dataName": "Bosnia and Herzegovina",
+    "iso2": "BA",
+    "playable": true,
+    "areaKm2": 51693.21,
+    "bounds": [
+      15.7366,
+      42.5597,
+      19.5838,
+      45.2766
+    ],
+    "aliases": [
+      "Bosnia and Herzegovina",
+      "BiH"
+    ]
+  },
+  {
+    "id": "HRV",
+    "index": 73,
+    "displayName": "Croatia",
+    "dataName": "Croatia",
+    "iso2": "HR",
+    "playable": true,
+    "areaKm2": 53707.98,
+    "bounds": [
+      13.5172,
+      42.4329,
+      19.4,
+      46.5346
+    ],
+    "aliases": [
+      "Croatia"
+    ]
+  },
+  {
+    "id": "TGO",
+    "index": 169,
+    "displayName": "Togo",
+    "dataName": "Togo",
+    "iso2": "TG",
+    "playable": true,
+    "areaKm2": 57161.48,
+    "bounds": [
+      -0.0902,
+      6.0894,
+      1.7779,
+      11.1156
+    ],
+    "aliases": [
+      "Togo"
+    ]
+  },
+  {
+    "id": "LVA",
+    "index": 105,
+    "displayName": "Latvia",
+    "dataName": "Latvia",
+    "iso2": "LV",
+    "playable": true,
+    "areaKm2": 64242.25,
+    "bounds": [
+      21.0149,
+      55.6675,
+      28.2021,
+      58.0634
+    ],
+    "aliases": [
+      "Latvia"
+    ]
+  },
+  {
+    "id": "LTU",
+    "index": 103,
+    "displayName": "Lithuania",
+    "dataName": "Lithuania",
+    "iso2": "LT",
+    "playable": true,
+    "areaKm2": 64385.32,
+    "bounds": [
+      21.0461,
+      53.893,
+      26.7757,
+      56.4112
+    ],
+    "aliases": [
+      "Lithuania"
+    ]
+  },
+  {
+    "id": "LKA",
+    "index": 101,
+    "displayName": "Sri Lanka",
+    "dataName": "Sri Lanka",
+    "iso2": "LK",
+    "playable": true,
+    "areaKm2": 65929.42,
+    "bounds": [
+      79.7078,
+      5.9494,
+      81.877,
+      9.8127
+    ],
+    "aliases": [
+      "Sri Lanka"
+    ]
+  },
+  {
+    "id": "IRL",
+    "index": 78,
+    "displayName": "Ireland",
+    "dataName": "Ireland",
+    "iso2": "IE",
+    "playable": true,
+    "areaKm2": 68571.8,
+    "bounds": [
+      -10.3902,
+      51.4737,
+      -6.0274,
+      55.3602
+    ],
+    "aliases": [
+      "Ireland"
+    ]
+  },
+  {
+    "id": "GEO",
+    "index": 62,
+    "displayName": "Georgia",
+    "dataName": "Georgia",
+    "iso2": "GE",
+    "playable": true,
+    "areaKm2": 69329.82,
+    "bounds": [
+      39.9783,
+      41.0702,
+      46.6726,
+      43.5698
+    ],
+    "aliases": [
+      "Georgia"
+    ]
+  },
+  {
+    "id": "ARE",
+    "index": 4,
+    "displayName": "United Arab Emirates",
+    "dataName": "United Arab Emirates",
+    "iso2": "AE",
+    "playable": true,
+    "areaKm2": 70705.77,
+    "bounds": [
+      51.5684,
+      22.6239,
+      56.388,
+      26.0682
+    ],
+    "aliases": [
+      "United Arab Emirates",
+      "UAE"
+    ]
+  },
+  {
+    "id": "SLE",
+    "index": 154,
+    "displayName": "Sierra Leone",
+    "dataName": "Sierra Leone",
+    "iso2": "SL",
+    "playable": true,
+    "areaKm2": 71965.58,
+    "bounds": [
+      -13.2927,
+      6.9065,
+      -10.2832,
+      9.9965
+    ],
+    "aliases": [
+      "Sierra Leone"
+    ]
+  },
+  {
+    "id": "PAN",
+    "index": 135,
+    "displayName": "Panama",
+    "dataName": "Panama",
+    "iso2": "PA",
+    "playable": true,
+    "areaKm2": 73935.6,
+    "bounds": [
+      -83.0273,
+      7.2201,
+      -77.196,
+      9.5979
+    ],
+    "aliases": [
+      "Panama"
+    ]
+  },
+  {
+    "id": "SRB",
+    "index": 158,
+    "displayName": "Serbia",
+    "dataName": "Serbia",
+    "iso2": "RS",
+    "playable": true,
+    "areaKm2": 77472.16,
+    "bounds": [
+      18.8391,
+      42.2421,
+      22.9769,
+      46.1692
+    ],
+    "aliases": [
+      "Serbia"
+    ]
+  },
+  {
+    "id": "CZE",
+    "index": 43,
+    "displayName": "Czech Republic",
+    "dataName": "Czech Republic",
+    "iso2": "CZ",
+    "playable": true,
+    "areaKm2": 78468.56,
+    "bounds": [
+      12.0897,
+      48.5762,
+      18.8322,
+      51.0378
+    ],
+    "aliases": [
+      "Czech Republic",
+      "Czechia"
+    ]
+  },
+  {
+    "id": "AUT",
+    "index": 9,
+    "displayName": "Austria",
+    "dataName": "Austria",
+    "iso2": "AT",
+    "playable": true,
+    "areaKm2": 83894.59,
+    "bounds": [
+      9.524,
+      46.3997,
+      17.1474,
+      49.0011
+    ],
+    "aliases": [
+      "Austria"
+    ]
+  },
+  {
+    "id": "AZE",
+    "index": 10,
+    "displayName": "Azerbaijan",
+    "dataName": "Azerbaijan",
+    "iso2": "AZ",
+    "playable": true,
+    "areaKm2": 86358.17,
+    "bounds": [
+      44.7683,
+      38.3987,
+      50.3659,
+      41.891
+    ],
+    "aliases": [
+      "Azerbaijan"
+    ]
+  },
+  {
+    "id": "JOR",
+    "index": 85,
+    "displayName": "Jordan",
+    "dataName": "Jordan",
+    "iso2": "JO",
+    "playable": true,
+    "areaKm2": 88744.86,
+    "bounds": [
+      34.9508,
+      29.1905,
+      39.2928,
+      33.3722
+    ],
+    "aliases": [
+      "Jordan"
+    ]
+  },
+  {
+    "id": "PRT",
+    "index": 142,
+    "displayName": "Portugal",
+    "dataName": "Portugal",
+    "iso2": "PT",
+    "playable": true,
+    "areaKm2": 89267.42,
+    "bounds": [
+      -25.8459,
+      32.6483,
+      -6.2125,
+      42.1374
+    ],
+    "aliases": [
+      "Portugal"
+    ]
+  },
+  {
+    "id": "HUN",
+    "index": 75,
+    "displayName": "Hungary",
+    "dataName": "Hungary",
+    "iso2": "HU",
+    "playable": true,
+    "areaKm2": 92939.89,
+    "bounds": [
+      16.0931,
+      45.753,
+      22.8767,
+      48.5535
+    ],
+    "aliases": [
+      "Hungary"
+    ]
+  },
+  {
+    "id": "KOR",
+    "index": 93,
+    "displayName": "Republic of Korea",
+    "dataName": "Republic of Korea",
+    "iso2": "KR",
+    "playable": true,
+    "areaKm2": 95311.67,
+    "bounds": [
+      126.1605,
+      33.2015,
+      129.5729,
+      38.6234
+    ],
+    "aliases": [
+      "Republic of Korea",
+      "South Korea"
+    ]
+  },
+  {
+    "id": "LBR",
+    "index": 97,
+    "displayName": "Liberia",
+    "dataName": "Liberia",
+    "iso2": "LR",
+    "playable": true,
+    "areaKm2": 95658.08,
+    "bounds": [
+      -11.5075,
+      4.3513,
+      -7.3999,
+      8.5346
+    ],
+    "aliases": [
+      "Liberia"
+    ]
+  },
+  {
+    "id": "ISL",
+    "index": 81,
+    "displayName": "Iceland",
+    "dataName": "Iceland",
+    "iso2": "IS",
+    "playable": true,
+    "areaKm2": 101115.85,
+    "bounds": [
+      -24.4757,
+      63.4067,
+      -13.5586,
+      66.5229
+    ],
+    "aliases": [
+      "Iceland"
+    ]
+  },
+  {
+    "id": "CUB",
+    "index": 41,
+    "displayName": "Cuba",
+    "dataName": "Cuba",
+    "iso2": "CU",
+    "playable": true,
+    "areaKm2": 108259.08,
+    "bounds": [
+      -84.8872,
+      19.8555,
+      -74.1368,
+      23.1904
+    ],
+    "aliases": [
+      "Cuba"
+    ]
+  },
+  {
+    "id": "GTM",
+    "index": 70,
+    "displayName": "Guatemala",
+    "dataName": "Guatemala",
+    "iso2": "GT",
+    "playable": true,
+    "areaKm2": 108407.09,
+    "bounds": [
+      -92.2352,
+      13.7365,
+      -88.2283,
+      17.8164
+    ],
+    "aliases": [
+      "Guatemala"
+    ]
+  },
+  {
+    "id": "BGR",
+    "index": 16,
+    "displayName": "Bulgaria",
+    "dataName": "Bulgaria",
+    "iso2": "BG",
+    "playable": true,
+    "areaKm2": 112383.15,
+    "bounds": [
+      22.344,
+      41.2436,
+      28.5854,
+      44.2378
+    ],
+    "aliases": [
+      "Bulgaria"
+    ]
+  },
+  {
+    "id": "HND",
+    "index": 72,
+    "displayName": "Honduras",
+    "dataName": "Honduras",
+    "iso2": "HN",
+    "playable": true,
+    "areaKm2": 113387.05,
+    "bounds": [
+      -89.3626,
+      12.9792,
+      -83.1575,
+      16.0242
+    ],
+    "aliases": [
+      "Honduras"
+    ]
+  },
+  {
+    "id": "BEN",
+    "index": 13,
+    "displayName": "Benin",
+    "dataName": "Benin",
+    "iso2": "BJ",
+    "playable": true,
+    "areaKm2": 116551.82,
+    "bounds": [
+      0.7634,
+      6.2168,
+      3.8345,
+      12.3838
+    ],
+    "aliases": [
+      "Benin"
+    ]
+  },
+  {
+    "id": "MWI",
+    "index": 122,
+    "displayName": "Malawi",
+    "dataName": "Malawi",
+    "iso2": "MW",
+    "playable": true,
+    "areaKm2": 119604.39,
+    "bounds": [
+      32.6704,
+      -17.1311,
+      35.8928,
+      -9.395
+    ],
+    "aliases": [
+      "Malawi"
+    ]
+  },
+  {
+    "id": "PRK",
+    "index": 141,
+    "displayName": "Democratic Republic of Korea",
+    "dataName": "Dem. Rep. Korea",
+    "iso2": "KP",
+    "playable": true,
+    "areaKm2": 122399.59,
+    "bounds": [
+      124.3486,
+      37.7248,
+      130.6873,
+      42.9981
+    ],
+    "aliases": [
+      "Democratic Republic of Korea",
+      "Dem. Rep. Korea",
+      "North Korea"
+    ]
+  },
+  {
+    "id": "ERI",
+    "index": 52,
+    "displayName": "Eritrea",
+    "dataName": "Eritrea",
+    "iso2": "ER",
+    "playable": true,
+    "areaKm2": 123534.82,
+    "bounds": [
+      36.4268,
+      12.3766,
+      43.1167,
+      18.0051
+    ],
+    "aliases": [
+      "Eritrea"
+    ]
+  },
+  {
+    "id": "GRC",
+    "index": 68,
+    "displayName": "Greece",
+    "dataName": "Greece",
+    "iso2": "GR",
+    "playable": true,
+    "areaKm2": 123667.21,
+    "bounds": [
+      20.0013,
+      34.9345,
+      28.2318,
+      41.7438
+    ],
+    "aliases": [
+      "Greece"
+    ]
+  },
+  {
+    "id": "NIC",
+    "index": 127,
+    "displayName": "Nicaragua",
+    "dataName": "Nicaragua",
+    "iso2": "NI",
+    "playable": true,
+    "areaKm2": 129215.88,
+    "bounds": [
+      -87.6702,
+      10.7354,
+      -83.1575,
+      15.0081
+    ],
+    "aliases": [
+      "Nicaragua"
+    ]
+  },
+  {
+    "id": "BGD",
+    "index": 15,
+    "displayName": "Bangladesh",
+    "dataName": "Bangladesh",
+    "iso2": "BD",
+    "playable": true,
+    "areaKm2": 134638.49,
+    "bounds": [
+      88.0234,
+      20.7904,
+      92.6316,
+      26.5715
+    ],
+    "aliases": [
+      "Bangladesh"
+    ]
+  },
+  {
+    "id": "TJK",
+    "index": 171,
+    "displayName": "Tajikistan",
+    "dataName": "Tajikistan",
+    "iso2": "TJ",
+    "playable": true,
+    "areaKm2": 142178.56,
+    "bounds": [
+      67.3496,
+      36.684,
+      75.1188,
+      41.0351
+    ],
+    "aliases": [
+      "Tajikistan"
+    ]
+  },
+  {
+    "id": "SUR",
+    "index": 161,
+    "displayName": "Suriname",
+    "dataName": "Suriname",
+    "iso2": "SR",
+    "playable": true,
+    "areaKm2": 145573.47,
+    "bounds": [
+      -58.0545,
+      1.8422,
+      -53.9905,
+      5.9935
+    ],
+    "aliases": [
+      "Suriname"
+    ]
+  },
+  {
+    "id": "NPL",
+    "index": 130,
+    "displayName": "Nepal",
+    "dataName": "Nepal",
+    "iso2": "NP",
+    "playable": true,
+    "areaKm2": 147082.77,
+    "bounds": [
+      80.0517,
+      26.3603,
+      88.1615,
+      30.3875
+    ],
+    "aliases": [
+      "Nepal"
+    ]
+  },
+  {
+    "id": "TUN",
+    "index": 176,
+    "displayName": "Tunisia",
+    "dataName": "Tunisia",
+    "iso2": "TN",
+    "playable": true,
+    "areaKm2": 156048.43,
+    "bounds": [
+      7.4956,
+      30.2294,
+      11.5359,
+      37.3404
+    ],
+    "aliases": [
+      "Tunisia"
+    ]
+  },
+  {
+    "id": "URY",
+    "index": 183,
+    "displayName": "Uruguay",
+    "dataName": "Uruguay",
+    "iso2": "UY",
+    "playable": true,
+    "areaKm2": 177618.93,
+    "bounds": [
+      -58.4381,
+      -34.9328,
+      -53.1256,
+      -30.1011
+    ],
+    "aliases": [
+      "Uruguay"
+    ]
+  },
+  {
+    "id": "KHM",
+    "index": 90,
+    "displayName": "Cambodia",
+    "dataName": "Cambodia",
+    "iso2": "KH",
+    "playable": true,
+    "areaKm2": 181285.95,
+    "bounds": [
+      102.3197,
+      10.4112,
+      107.6055,
+      14.7051
+    ],
+    "aliases": [
+      "Cambodia"
+    ]
+  },
+  {
+    "id": "SYR",
+    "index": 167,
+    "displayName": "Syria",
+    "dataName": "Syria",
+    "iso2": "SY",
+    "playable": true,
+    "areaKm2": 185844.14,
+    "bounds": [
+      35.7645,
+      32.3173,
+      42.359,
+      37.2973
+    ],
+    "aliases": [
+      "Syria"
+    ]
+  },
+  {
+    "id": "SEN",
+    "index": 151,
+    "displayName": "Senegal",
+    "dataName": "Senegal",
+    "iso2": "SN",
+    "playable": true,
+    "areaKm2": 197382.99,
+    "bounds": [
+      -17.5356,
+      12.328,
+      -11.3824,
+      16.6789
+    ],
+    "aliases": [
+      "Senegal"
+    ]
+  },
+  {
+    "id": "KGZ",
+    "index": 89,
+    "displayName": "Kyrgyzstan",
+    "dataName": "Kyrgyzstan",
+    "iso2": "KG",
+    "playable": true,
+    "areaKm2": 198645.95,
+    "bounds": [
+      69.2291,
+      39.2075,
+      80.2462,
+      43.2404
+    ],
+    "aliases": [
+      "Kyrgyzstan"
+    ]
+  },
+  {
+    "id": "BLR",
+    "index": 20,
+    "displayName": "Belarus",
+    "dataName": "Belarus",
+    "iso2": "BY",
+    "playable": true,
+    "areaKm2": 206695.05,
+    "bounds": [
+      23.1751,
+      51.265,
+      32.7064,
+      56.1429
+    ],
+    "aliases": [
+      "Belarus"
+    ]
+  },
+  {
+    "id": "GUY",
+    "index": 71,
+    "displayName": "Guyana",
+    "dataName": "Guyana",
+    "iso2": "GY",
+    "playable": true,
+    "areaKm2": 211868.69,
+    "bounds": [
+      -61.3908,
+      1.2012,
+      -56.4828,
+      8.5493
+    ],
+    "aliases": [
+      "Guyana"
+    ]
+  },
+  {
+    "id": "LAO",
+    "index": 95,
+    "displayName": "Laos",
+    "dataName": "Lao PDR",
+    "iso2": "LA",
+    "playable": true,
+    "areaKm2": 229036.6,
+    "bounds": [
+      100.1149,
+      13.9212,
+      107.6531,
+      22.4903
+    ],
+    "aliases": [
+      "Laos",
+      "Lao PDR"
+    ]
+  },
+  {
+    "id": "GBR",
+    "index": 61,
+    "displayName": "United Kingdom",
+    "dataName": "United Kingdom",
+    "iso2": "GB",
+    "playable": true,
+    "areaKm2": 233605.45,
+    "bounds": [
+      -8.1448,
+      50.0214,
+      1.7466,
+      58.65
+    ],
+    "aliases": [
+      "United Kingdom",
+      "UK"
+    ]
+  },
+  {
+    "id": "ROU",
+    "index": 146,
+    "displayName": "Romania",
+    "dataName": "Romania",
+    "iso2": "RO",
+    "playable": true,
+    "areaKm2": 235763.77,
+    "bounds": [
+      20.2418,
+      43.6708,
+      29.7059,
+      48.2599
+    ],
+    "aliases": [
+      "Romania"
+    ]
+  },
+  {
+    "id": "GHA",
+    "index": 63,
+    "displayName": "Ghana",
+    "dataName": "Ghana",
+    "iso2": "GH",
+    "playable": true,
+    "areaKm2": 239487.24,
+    "bounds": [
+      -3.2439,
+      4.7625,
+      1.1872,
+      11.1669
+    ],
+    "aliases": [
+      "Ghana"
+    ]
+  },
+  {
+    "id": "UGA",
+    "index": 181,
+    "displayName": "Uganda",
+    "dataName": "Uganda",
+    "iso2": "UG",
+    "playable": true,
+    "areaKm2": 242352.62,
+    "bounds": [
+      29.5619,
+      -1.4699,
+      34.9782,
+      4.2202
+    ],
+    "aliases": [
+      "Uganda"
+    ]
+  },
+  {
+    "id": "GIN",
+    "index": 64,
+    "displayName": "Guinea",
+    "dataName": "Guinea",
+    "iso2": "GN",
+    "playable": true,
+    "areaKm2": 244786.95,
+    "bounds": [
+      -15.0512,
+      7.2159,
+      -7.6812,
+      12.6739
+    ],
+    "aliases": [
+      "Guinea"
+    ]
+  },
+  {
+    "id": "ECU",
+    "index": 50,
+    "displayName": "Ecuador",
+    "dataName": "Ecuador",
+    "iso2": "EC",
+    "playable": true,
+    "areaKm2": 252110.04,
+    "bounds": [
+      -91.5968,
+      -4.9906,
+      -75.2496,
+      1.4554
+    ],
+    "aliases": [
+      "Ecuador"
+    ]
+  },
+  {
+    "id": "GAB",
+    "index": 60,
+    "displayName": "Gabon",
+    "dataName": "Gabon",
+    "iso2": "GA",
+    "playable": true,
+    "areaKm2": 260601.18,
+    "bounds": [
+      8.7031,
+      -3.9163,
+      14.4806,
+      2.2997
+    ],
+    "aliases": [
+      "Gabon"
+    ]
+  },
+  {
+    "id": "NZL",
+    "index": 132,
+    "displayName": "New Zealand",
+    "dataName": "New Zealand",
+    "iso2": "NZ",
+    "playable": true,
+    "areaKm2": 264805.91,
+    "bounds": [
+      166.4776,
+      -47.2587,
+      178.5362,
+      -34.4291
+    ],
+    "aliases": [
+      "New Zealand"
+    ]
+  },
+  {
+    "id": "BFA",
+    "index": 14,
+    "displayName": "Burkina Faso",
+    "dataName": "Burkina Faso",
+    "iso2": "BF",
+    "playable": true,
+    "areaKm2": 273742.85,
+    "bounds": [
+      -5.5235,
+      9.4247,
+      2.3892,
+      15.0779
+    ],
+    "aliases": [
+      "Burkina Faso"
+    ]
+  },
+  {
+    "id": "PHL",
+    "index": 137,
+    "displayName": "Philippines",
+    "dataName": "Philippines",
+    "iso2": "PH",
+    "playable": true,
+    "areaKm2": 277641.96,
+    "bounds": [
+      117.2186,
+      5.599,
+      126.5934,
+      18.6153
+    ],
+    "aliases": [
+      "Philippines"
+    ]
+  },
+  {
+    "id": "ITA",
+    "index": 83,
+    "displayName": "Italy",
+    "dataName": "Italy",
+    "iso2": "IT",
+    "playable": true,
+    "areaKm2": 299762.87,
+    "bounds": [
+      6.6277,
+      36.6878,
+      18.4858,
+      47.0821
+    ],
+    "aliases": [
+      "Italy"
+    ]
+  },
+  {
+    "id": "OMN",
+    "index": 133,
+    "displayName": "Oman",
+    "dataName": "Oman",
+    "iso2": "OM",
+    "playable": true,
+    "areaKm2": 311313.33,
+    "bounds": [
+      51.9776,
+      16.6484,
+      59.8375,
+      26.3563
+    ],
+    "aliases": [
+      "Oman"
+    ]
+  },
+  {
+    "id": "POL",
+    "index": 140,
+    "displayName": "Poland",
+    "dataName": "Poland",
+    "iso2": "PL",
+    "playable": true,
+    "areaKm2": 312543.17,
+    "bounds": [
+      14.1286,
+      49.0208,
+      24.1058,
+      54.8382
+    ],
+    "aliases": [
+      "Poland"
+    ]
+  },
+  {
+    "id": "CIV",
+    "index": 33,
+    "displayName": "Côte d'Ivoire",
+    "dataName": "Côte d'Ivoire",
+    "iso2": "CI",
+    "playable": true,
+    "areaKm2": 322322.76,
+    "bounds": [
+      -8.6036,
+      4.3513,
+      -2.5059,
+      10.7179
+    ],
+    "aliases": [
+      "Côte d'Ivoire",
+      "Ivory Coast"
+    ]
+  },
+  {
+    "id": "MYS",
+    "index": 123,
+    "displayName": "Malaysia",
+    "dataName": "Malaysia",
+    "iso2": "MY",
+    "playable": true,
+    "areaKm2": 325947.31,
+    "bounds": [
+      100.1191,
+      0.862,
+      119.2663,
+      6.9902
+    ],
+    "aliases": [
+      "Malaysia"
+    ]
+  },
+  {
+    "id": "VNM",
+    "index": 189,
+    "displayName": "Vietnam",
+    "dataName": "Vietnam",
+    "iso2": "VN",
+    "playable": true,
+    "areaKm2": 327754.14,
+    "bounds": [
+      102.1274,
+      8.5833,
+      109.4449,
+      23.3452
+    ],
+    "aliases": [
+      "Vietnam"
+    ]
+  },
+  {
+    "id": "FIN",
+    "index": 56,
+    "displayName": "Finland",
+    "dataName": "Finland",
+    "iso2": "FI",
+    "playable": true,
+    "areaKm2": 329717.42,
+    "bounds": [
+      20.6222,
+      59.816,
+      31.5365,
+      70.0648
+    ],
+    "aliases": [
+      "Finland"
+    ]
+  },
+  {
+    "id": "COG",
+    "index": 36,
+    "displayName": "Republic of the Congo",
+    "dataName": "Republic of the Congo",
+    "iso2": "CG",
+    "playable": true,
+    "areaKm2": 346800.04,
+    "bounds": [
+      11.1302,
+      -5.0043,
+      18.6222,
+      3.6873
+    ],
+    "aliases": [
+      "Republic of the Congo",
+      "Republic of Congo"
+    ]
+  },
+  {
+    "id": "DEU",
+    "index": 44,
+    "displayName": "Germany",
+    "dataName": "Germany",
+    "iso2": "DE",
+    "playable": true,
+    "areaKm2": 354236.38,
+    "bounds": [
+      5.8575,
+      47.2788,
+      15.0166,
+      54.9034
+    ],
+    "aliases": [
+      "Germany"
+    ]
+  },
+  {
+    "id": "JPN",
+    "index": 86,
+    "displayName": "Japan",
+    "dataName": "Japan",
+    "iso2": "JP",
+    "playable": true,
+    "areaKm2": 361739.22,
+    "bounds": [
+      129.5801,
+      31.0151,
+      145.833,
+      45.5095
+    ],
+    "aliases": [
+      "Japan"
+    ]
+  },
+  {
+    "id": "NOR",
+    "index": 129,
+    "displayName": "Norway",
+    "dataName": "Norway",
+    "playable": true,
+    "areaKm2": 373735.91,
+    "bounds": [
+      4.9104,
+      58.0209,
+      30.9606,
+      80.4778
+    ],
+    "aliases": [
+      "Norway"
+    ]
+  },
+  {
+    "id": "ZWE",
+    "index": 196,
+    "displayName": "Zimbabwe",
+    "dataName": "Zimbabwe",
+    "iso2": "ZW",
+    "playable": true,
+    "areaKm2": 390076.47,
+    "bounds": [
+      25.224,
+      -22.4021,
+      33.0067,
+      -15.6431
+    ],
+    "aliases": [
+      "Zimbabwe"
+    ]
+  },
+  {
+    "id": "PRY",
+    "index": 143,
+    "displayName": "Paraguay",
+    "dataName": "Paraguay",
+    "iso2": "PY",
+    "playable": true,
+    "areaKm2": 401053.25,
+    "bounds": [
+      -62.651,
+      -27.5538,
+      -54.2418,
+      -19.2862
+    ],
+    "aliases": [
+      "Paraguay"
+    ]
+  },
+  {
+    "id": "IRQ",
+    "index": 80,
+    "displayName": "Iraq",
+    "dataName": "Iraq",
+    "iso2": "IQ",
+    "playable": true,
+    "areaKm2": 437495.25,
+    "bounds": [
+      38.7735,
+      29.0637,
+      48.5465,
+      37.3719
+    ],
+    "aliases": [
+      "Iraq"
+    ]
+  },
+  {
+    "id": "SWE",
+    "index": 164,
+    "displayName": "Sweden",
+    "dataName": "Sweden",
+    "iso2": "SE",
+    "playable": true,
+    "areaKm2": 441528.97,
+    "bounds": [
+      11.1472,
+      55.3464,
+      24.1555,
+      69.0369
+    ],
+    "aliases": [
+      "Sweden"
+    ]
+  },
+  {
+    "id": "UZB",
+    "index": 185,
+    "displayName": "Uzbekistan",
+    "dataName": "Uzbekistan",
+    "iso2": "UZ",
+    "playable": true,
+    "areaKm2": 446747.91,
+    "bounds": [
+      55.9757,
+      37.1722,
+      73.1369,
+      45.5554
+    ],
+    "aliases": [
+      "Uzbekistan"
+    ]
+  },
+  {
+    "id": "PNG",
+    "index": 139,
+    "displayName": "Papua New Guinea",
+    "dataName": "Papua New Guinea",
+    "iso2": "PG",
+    "playable": true,
+    "areaKm2": 452708.47,
+    "bounds": [
+      140.8623,
+      -10.6549,
+      155.9576,
+      -2.5729
+    ],
+    "aliases": [
+      "Papua New Guinea"
+    ]
+  },
+  {
+    "id": "YEM",
+    "index": 193,
+    "displayName": "Yemen",
+    "dataName": "Yemen",
+    "iso2": "YE",
+    "playable": true,
+    "areaKm2": 453926.09,
+    "bounds": [
+      42.6578,
+      12.319,
+      54.5111,
+      18.9961
+    ],
+    "aliases": [
+      "Yemen"
+    ]
+  },
+  {
+    "id": "CMR",
+    "index": 34,
+    "displayName": "Cameroon",
+    "dataName": "Cameroon",
+    "iso2": "CM",
+    "playable": true,
+    "areaKm2": 465974.47,
+    "bounds": [
+      8.5328,
+      1.6762,
+      16.1834,
+      13.0785
+    ],
+    "aliases": [
+      "Cameroon"
+    ]
+  },
+  {
+    "id": "TKM",
+    "index": 172,
+    "displayName": "Turkmenistan",
+    "dataName": "Turkmenistan",
+    "iso2": "TM",
+    "playable": true,
+    "areaKm2": 470538.56,
+    "bounds": [
+      52.4938,
+      35.1708,
+      66.6293,
+      42.7785
+    ],
+    "aliases": [
+      "Turkmenistan"
+    ]
+  },
+  {
+    "id": "SOM",
+    "index": 157,
+    "displayName": "Somalia",
+    "dataName": "Somalia",
+    "iso2": "SO",
+    "playable": true,
+    "areaKm2": 473506.02,
+    "bounds": [
+      40.9645,
+      -1.6953,
+      51.3902,
+      11.9837
+    ],
+    "aliases": [
+      "Somalia"
+    ]
+  },
+  {
+    "id": "ESP",
+    "index": 53,
+    "displayName": "Spain",
+    "dataName": "Spain",
+    "iso2": "ES",
+    "playable": true,
+    "areaKm2": 497656.24,
+    "bounds": [
+      -9.2356,
+      36.0259,
+      3.4618,
+      43.7646
+    ],
+    "aliases": [
+      "Spain"
+    ]
+  },
+  {
+    "id": "THA",
+    "index": 170,
+    "displayName": "Thailand",
+    "dataName": "Thailand",
+    "iso2": "TH",
+    "playable": true,
+    "areaKm2": 514373.2,
+    "bounds": [
+      97.3739,
+      5.6368,
+      105.641,
+      20.4244
+    ],
+    "aliases": [
+      "Thailand"
+    ]
+  },
+  {
+    "id": "UKR",
+    "index": 182,
+    "displayName": "Ukraine",
+    "dataName": "Ukraine",
+    "iso2": "UA",
+    "playable": true,
+    "areaKm2": 569970.08,
+    "bounds": [
+      22.1318,
+      45.2341,
+      40.1283,
+      52.3536
+    ],
+    "aliases": [
+      "Ukraine"
+    ]
+  },
+  {
+    "id": "BWA",
+    "index": 27,
+    "displayName": "Botswana",
+    "dataName": "Botswana",
+    "iso2": "BW",
+    "playable": true,
+    "areaKm2": 580675.85,
+    "bounds": [
+      19.9773,
+      -26.8542,
+      29.3648,
+      -17.7936
+    ],
+    "aliases": [
+      "Botswana"
+    ]
+  },
+  {
+    "id": "MAR",
+    "index": 106,
+    "displayName": "Morocco",
+    "dataName": "Morocco",
+    "iso2": "MA",
+    "playable": true,
+    "areaKm2": 582419.17,
+    "bounds": [
+      -17.0031,
+      21.4207,
+      -1.0655,
+      35.9299
+    ],
+    "aliases": [
+      "Morocco"
+    ]
+  },
+  {
+    "id": "MDG",
+    "index": 109,
+    "displayName": "Madagascar",
+    "dataName": "Madagascar",
+    "iso2": "MG",
+    "playable": true,
+    "areaKm2": 594062.6,
+    "bounds": [
+      43.2648,
+      -25.5705,
+      50.4827,
+      -12.0796
+    ],
+    "aliases": [
+      "Madagascar"
+    ]
+  },
+  {
+    "id": "KEN",
+    "index": 88,
+    "displayName": "Kenya",
+    "dataName": "Kenya",
+    "iso2": "KE",
+    "playable": true,
+    "areaKm2": 594582.58,
+    "bounds": [
+      33.9032,
+      -4.6924,
+      41.884,
+      5.4923
+    ],
+    "aliases": [
+      "Kenya"
+    ]
+  },
+  {
+    "id": "CAF",
+    "index": 28,
+    "displayName": "Central African Republic",
+    "dataName": "Central African Republic",
+    "iso2": "CF",
+    "playable": true,
+    "areaKm2": 620955.49,
+    "bounds": [
+      14.4312,
+      2.2701,
+      27.4033,
+      10.9962
+    ],
+    "aliases": [
+      "Central African Republic",
+      "CAR"
+    ]
+  },
+  {
+    "id": "SSD",
+    "index": 159,
+    "displayName": "South Sudan",
+    "dataName": "South Sudan",
+    "iso2": "SS",
+    "playable": true,
+    "areaKm2": 624040.24,
+    "bounds": [
+      24.1474,
+      3.4907,
+      35.2684,
+      12.2231
+    ],
+    "aliases": [
+      "South Sudan"
+    ]
+  },
+  {
+    "id": "FRA",
+    "index": 58,
+    "displayName": "France",
+    "dataName": "France",
+    "playable": true,
+    "areaKm2": 629251.51,
+    "bounds": [
+      -54.6163,
+      2.121,
+      9.5507,
+      51.0971
+    ],
+    "aliases": [
+      "France"
+    ]
+  },
+  {
+    "id": "AFG",
+    "index": 0,
+    "displayName": "Afghanistan",
+    "dataName": "Afghanistan",
+    "iso2": "AF",
+    "playable": true,
+    "areaKm2": 641809.3,
+    "bounds": [
+      60.4857,
+      29.3919,
+      74.8913,
+      38.4564
+    ],
+    "aliases": [
+      "Afghanistan"
+    ]
+  },
+  {
+    "id": "MMR",
+    "index": 116,
+    "displayName": "Myanmar",
+    "dataName": "Myanmar",
+    "iso2": "MM",
+    "playable": true,
+    "areaKm2": 658825.41,
+    "bounds": [
+      92.1796,
+      10.035,
+      101.1473,
+      28.517
+    ],
+    "aliases": [
+      "Myanmar"
+    ]
+  },
+  {
+    "id": "CHL",
+    "index": 31,
+    "displayName": "Chile",
+    "dataName": "Chile",
+    "iso2": "CL",
+    "playable": true,
+    "areaKm2": 715899.39,
+    "bounds": [
+      -75.7081,
+      -55.6506,
+      -67.0088,
+      -17.5061
+    ],
+    "aliases": [
+      "Chile"
+    ]
+  },
+  {
+    "id": "ZMB",
+    "index": 195,
+    "displayName": "Zambia",
+    "dataName": "Zambia",
+    "iso2": "ZM",
+    "playable": true,
+    "areaKm2": 755560.19,
+    "bounds": [
+      21.9789,
+      -18.0415,
+      33.6615,
+      -8.1937
+    ],
+    "aliases": [
+      "Zambia"
+    ]
+  },
+  {
+    "id": "TUR",
+    "index": 177,
+    "displayName": "Türkiye",
+    "dataName": "Turkey",
+    "iso2": "TR",
+    "playable": true,
+    "areaKm2": 779650.94,
+    "bounds": [
+      26.039,
+      35.8314,
+      44.8172,
+      42.0933
+    ],
+    "aliases": [
+      "Türkiye",
+      "Turkey"
+    ]
+  },
+  {
+    "id": "MOZ",
+    "index": 119,
+    "displayName": "Mozambique",
+    "dataName": "Mozambique",
+    "iso2": "MZ",
+    "playable": true,
+    "areaKm2": 790799.16,
+    "bounds": [
+      30.225,
+      -26.8616,
+      40.8445,
+      -10.4644
+    ],
+    "aliases": [
+      "Mozambique"
+    ]
+  },
+  {
+    "id": "NAM",
+    "index": 124,
+    "displayName": "Namibia",
+    "dataName": "Namibia",
+    "iso2": "NA",
+    "playable": true,
+    "areaKm2": 824310.14,
+    "bounds": [
+      11.7217,
+      -28.9388,
+      25.2588,
+      -16.9677
+    ],
+    "aliases": [
+      "Namibia"
+    ]
+  },
+  {
+    "id": "PAK",
+    "index": 134,
+    "displayName": "Pakistan",
+    "dataName": "Pakistan",
+    "iso2": "PK",
+    "playable": true,
+    "areaKm2": 873891.22,
+    "bounds": [
+      60.8434,
+      23.7534,
+      77.0486,
+      37.0367
+    ],
+    "aliases": [
+      "Pakistan"
+    ]
+  },
+  {
+    "id": "NGA",
+    "index": 126,
+    "displayName": "Nigeria",
+    "dataName": "Nigeria",
+    "iso2": "NG",
+    "playable": true,
+    "areaKm2": 911233.68,
+    "bounds": [
+      2.686,
+      4.2774,
+      14.6271,
+      13.8729
+    ],
+    "aliases": [
+      "Nigeria"
+    ]
+  },
+  {
+    "id": "VEN",
+    "index": 188,
+    "displayName": "Venezuela",
+    "dataName": "Venezuela",
+    "iso2": "VE",
+    "playable": true,
+    "areaKm2": 912665.78,
+    "bounds": [
+      -73.3662,
+      0.688,
+      -59.8289,
+      12.1779
+    ],
+    "aliases": [
+      "Venezuela"
+    ]
+  },
+  {
+    "id": "TZA",
+    "index": 180,
+    "displayName": "Tanzania",
+    "dataName": "Tanzania",
+    "iso2": "TZ",
+    "playable": true,
+    "areaKm2": 943034.79,
+    "bounds": [
+      29.3234,
+      -11.7162,
+      40.4636,
+      -0.9949
+    ],
+    "aliases": [
+      "Tanzania"
+    ]
+  },
+  {
+    "id": "EGY",
+    "index": 51,
+    "displayName": "Egypt",
+    "dataName": "Egypt",
+    "iso2": "EG",
+    "playable": true,
+    "areaKm2": 1003498.16,
+    "bounds": [
+      24.7032,
+      21.9949,
+      36.8714,
+      31.655
+    ],
+    "aliases": [
+      "Egypt"
+    ]
+  },
+  {
+    "id": "MRT",
+    "index": 120,
+    "displayName": "Mauritania",
+    "dataName": "Mauritania",
+    "iso2": "MR",
+    "playable": true,
+    "areaKm2": 1037650.49,
+    "bounds": [
+      -17.064,
+      14.7454,
+      -4.8226,
+      27.2859
+    ],
+    "aliases": [
+      "Mauritania"
+    ]
+  },
+  {
+    "id": "BOL",
+    "index": 22,
+    "displayName": "Bolivia",
+    "dataName": "Bolivia",
+    "iso2": "BO",
+    "playable": true,
+    "areaKm2": 1090010.92,
+    "bounds": [
+      -69.6457,
+      -22.8917,
+      -57.4957,
+      -9.7124
+    ],
+    "aliases": [
+      "Bolivia"
+    ]
+  },
+  {
+    "id": "ETH",
+    "index": 55,
+    "displayName": "Ethiopia",
+    "dataName": "Ethiopia",
+    "iso2": "ET",
+    "playable": true,
+    "areaKm2": 1131838.57,
+    "bounds": [
+      32.9989,
+      3.4561,
+      47.9782,
+      14.8523
+    ],
+    "aliases": [
+      "Ethiopia"
+    ]
+  },
+  {
+    "id": "COL",
+    "index": 37,
+    "displayName": "Colombia",
+    "dataName": "Colombia",
+    "iso2": "CO",
+    "playable": true,
+    "areaKm2": 1139296.81,
+    "bounds": [
+      -79.0254,
+      -4.2359,
+      -66.876,
+      12.4323
+    ],
+    "aliases": [
+      "Colombia"
+    ]
+  },
+  {
+    "id": "NER",
+    "index": 125,
+    "displayName": "Niger",
+    "dataName": "Niger",
+    "iso2": "NE",
+    "playable": true,
+    "areaKm2": 1184869.34,
+    "bounds": [
+      0.1639,
+      11.6963,
+      15.9632,
+      23.5179
+    ],
+    "aliases": [
+      "Niger"
+    ]
+  },
+  {
+    "id": "ZAF",
+    "index": 194,
+    "displayName": "South Africa",
+    "dataName": "South Africa",
+    "iso2": "ZA",
+    "playable": true,
+    "areaKm2": 1221447.02,
+    "bounds": [
+      16.4476,
+      -34.7857,
+      32.8861,
+      -22.1463
+    ],
+    "aliases": [
+      "South Africa"
+    ]
+  },
+  {
+    "id": "AGO",
+    "index": 1,
+    "displayName": "Angola",
+    "dataName": "Angola",
+    "iso2": "AO",
+    "playable": true,
+    "areaKm2": 1249579.53,
+    "bounds": [
+      11.7431,
+      -18.0197,
+      24.0467,
+      -4.4289
+    ],
+    "aliases": [
+      "Angola"
+    ]
+  },
+  {
+    "id": "MLI",
+    "index": 114,
+    "displayName": "Mali",
+    "dataName": "Mali",
+    "iso2": "ML",
+    "playable": true,
+    "areaKm2": 1258192.25,
+    "bounds": [
+      -12.2806,
+      10.1433,
+      4.2347,
+      24.9956
+    ],
+    "aliases": [
+      "Mali"
+    ]
+  },
+  {
+    "id": "TCD",
+    "index": 168,
+    "displayName": "Chad",
+    "dataName": "Chad",
+    "iso2": "TD",
+    "playable": true,
+    "areaKm2": 1270083.98,
+    "bounds": [
+      13.4482,
+      7.4753,
+      23.9834,
+      23.4452
+    ],
+    "aliases": [
+      "Chad"
+    ]
+  },
+  {
+    "id": "PER",
+    "index": 136,
+    "displayName": "Peru",
+    "dataName": "Peru",
+    "iso2": "PE",
+    "playable": true,
+    "areaKm2": 1296365.03,
+    "bounds": [
+      -81.3366,
+      -18.3456,
+      -68.6853,
+      -0.0417
+    ],
+    "aliases": [
+      "Peru"
+    ]
+  },
+  {
+    "id": "MNG",
+    "index": 118,
+    "displayName": "Mongolia",
+    "dataName": "Mongolia",
+    "iso2": "MN",
+    "playable": true,
+    "areaKm2": 1560341.4,
+    "bounds": [
+      87.7432,
+      41.5955,
+      119.8979,
+      52.1173
+    ],
+    "aliases": [
+      "Mongolia"
+    ]
+  },
+  {
+    "id": "IRN",
+    "index": 79,
+    "displayName": "Iran",
+    "dataName": "Iran",
+    "iso2": "IR",
+    "playable": true,
+    "areaKm2": 1621537.4,
+    "bounds": [
+      44.0232,
+      25.1021,
+      63.3052,
+      39.7686
+    ],
+    "aliases": [
+      "Iran"
+    ]
+  },
+  {
+    "id": "LBY",
+    "index": 98,
+    "displayName": "Libya",
+    "dataName": "Libya",
+    "iso2": "LY",
+    "playable": true,
+    "areaKm2": 1626617.29,
+    "bounds": [
+      9.3103,
+      19.4966,
+      25.1505,
+      33.1819
+    ],
+    "aliases": [
+      "Libya"
+    ]
+  },
+  {
+    "id": "IDN",
+    "index": 76,
+    "displayName": "Indonesia",
+    "dataName": "Indonesia",
+    "iso2": "ID",
+    "playable": true,
+    "areaKm2": 1752423.83,
+    "bounds": [
+      95.2066,
+      -10.3472,
+      140.9762,
+      5.6288
+    ],
+    "aliases": [
+      "Indonesia"
+    ]
+  },
+  {
+    "id": "SDN",
+    "index": 150,
+    "displayName": "Sudan",
+    "dataName": "Sudan",
+    "iso2": "SD",
+    "playable": true,
+    "areaKm2": 1863134.73,
+    "bounds": [
+      21.8253,
+      8.6656,
+      38.6095,
+      22.2024
+    ],
+    "aliases": [
+      "Sudan"
+    ]
+  },
+  {
+    "id": "SAU",
+    "index": 149,
+    "displayName": "Saudi Arabia",
+    "dataName": "Saudi Arabia",
+    "iso2": "SA",
+    "playable": true,
+    "areaKm2": 1924839.94,
+    "bounds": [
+      34.6162,
+      16.3718,
+      55.641,
+      32.1245
+    ],
+    "aliases": [
+      "Saudi Arabia"
+    ]
+  },
+  {
+    "id": "MEX",
+    "index": 111,
+    "displayName": "Mexico",
+    "dataName": "Mexico",
+    "iso2": "MX",
+    "playable": true,
+    "areaKm2": 1957562.81,
+    "bounds": [
+      -117.1283,
+      14.5454,
+      -86.7718,
+      32.7153
+    ],
+    "aliases": [
+      "Mexico"
+    ]
+  },
+  {
+    "id": "DZA",
+    "index": 49,
+    "displayName": "Algeria",
+    "dataName": "Algeria",
+    "iso2": "DZ",
+    "playable": true,
+    "areaKm2": 2323481.66,
+    "bounds": [
+      -8.6833,
+      18.9884,
+      11.9679,
+      37.0924
+    ],
+    "aliases": [
+      "Algeria"
+    ]
+  },
+  {
+    "id": "COD",
+    "index": 35,
+    "displayName": "Democratic Republic of the Congo",
+    "dataName": "Democratic Republic of the Congo",
+    "iso2": "CD",
+    "playable": true,
+    "areaKm2": 2334671.98,
+    "bounds": [
+      12.2137,
+      -13.4538,
+      31.274,
+      5.3121
+    ],
+    "aliases": [
+      "Democratic Republic of the Congo",
+      "Democratic Republic of Congo",
+      "DR Congo",
+      "DRC"
+    ]
+  },
+  {
+    "id": "KAZ",
+    "index": 87,
+    "displayName": "Kazakhstan",
+    "dataName": "Kazakhstan",
+    "iso2": "KZ",
+    "playable": true,
+    "areaKm2": 2712636.14,
+    "bounds": [
+      46.6092,
+      40.6086,
+      87.3229,
+      55.3896
+    ],
+    "aliases": [
+      "Kazakhstan"
+    ]
+  },
+  {
+    "id": "ARG",
+    "index": 5,
+    "displayName": "Argentina",
+    "dataName": "Argentina",
+    "iso2": "AR",
+    "playable": true,
+    "areaKm2": 2781885.45,
+    "bounds": [
+      -73.5763,
+      -55.0321,
+      -53.6686,
+      -21.8025
+    ],
+    "aliases": [
+      "Argentina"
+    ]
+  },
+  {
+    "id": "IND",
+    "index": 77,
+    "displayName": "India",
+    "dataName": "India",
+    "iso2": "IN",
+    "playable": true,
+    "areaKm2": 3149148.8,
+    "bounds": [
+      68.165,
+      8.0783,
+      97.3392,
+      35.4959
+    ],
+    "aliases": [
+      "India"
+    ]
+  },
+  {
+    "id": "AUS",
+    "index": 8,
+    "displayName": "Australia",
+    "dataName": "Australia",
+    "iso2": "AU",
+    "playable": true,
+    "areaKm2": 7681024.54,
+    "bounds": [
+      113.1848,
+      -43.6125,
+      153.6169,
+      -10.7073
+    ],
+    "aliases": [
+      "Australia"
+    ]
+  },
+  {
+    "id": "BRA",
+    "index": 23,
+    "displayName": "Brazil",
+    "dataName": "Brazil",
+    "iso2": "BR",
+    "playable": true,
+    "areaKm2": 8450765.94,
+    "bounds": [
+      -74.0021,
+      -33.7422,
+      -34.8055,
+      5.258
+    ],
+    "aliases": [
+      "Brazil"
+    ]
+  },
+  {
+    "id": "CHN",
+    "index": 32,
+    "displayName": "China",
+    "dataName": "China",
+    "iso2": "CN",
+    "playable": true,
+    "areaKm2": 9335070.92,
+    "bounds": [
+      73.6073,
+      20.2637,
+      134.7523,
+      53.5556
+    ],
+    "aliases": [
+      "China"
+    ]
+  },
+  {
+    "id": "USA",
+    "index": 184,
+    "displayName": "United States",
+    "dataName": "United States",
+    "iso2": "US",
+    "playable": true,
+    "areaKm2": 9340747.1,
+    "bounds": [
+      -168.0884,
+      25.1333,
+      -66.987,
+      71.4077
+    ],
+    "aliases": [
+      "United States",
+      "USA",
+      "America"
+    ]
+  },
+  {
+    "id": "CAN",
+    "index": 29,
+    "displayName": "Canada",
+    "dataName": "Canada",
+    "iso2": "CA",
+    "playable": true,
+    "areaKm2": 9463940.33,
+    "bounds": [
+      -141.0021,
+      41.6749,
+      -52.6537,
+      83.1161
+    ],
+    "aliases": [
+      "Canada"
+    ]
+  },
+  {
+    "id": "RUS",
+    "index": 147,
+    "displayName": "Russian Federation",
+    "dataName": "Russian Federation",
+    "iso2": "RU",
+    "playable": true,
+    "areaKm2": 16549989.89,
+    "bounds": [
+      -180,
+      41.1993,
+      180,
+      77.7305
+    ],
+    "aliases": [
+      "Russian Federation",
+      "Russia"
+    ]
+  }
+]

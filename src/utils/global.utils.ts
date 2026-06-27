@@ -4,7 +4,10 @@ import {
   Vector3,
   Scene as BabylonScene,
 } from "@babylonjs/core";
-import type { Vec3Tuple, Vec4Tuple } from "@customTypes/types";
+
+export type Vec2Tuple = [number, number];
+export type Vec3Tuple = [number, number, number];
+export type Vec4Tuple = [number, number, number, number];
 
 export function toVector3(value: Vec3Tuple) {
   return new Vector3(value[0], value[1], value[2]);

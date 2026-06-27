@@ -7,13 +7,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:countries": "tsx src/country-data/processors/buildCountries.ts"
   },
   "dependencies": {
     "@babylonjs/core": "^9.13.0",
     "@babylonjs/loaders": "^9.13.0",
     "@preact/signals-react": "^3.10.2",
-    "@turf/turf": "^7.3.5",
     "react": "^19.2.7",
     "react-babylonjs": "^4.0.2",
     "react-dom": "^19.2.7",
@@ -24,6 +24,7 @@
     "@babylonjs/inspector": "^9.13.0",
     "@eslint/js": "^10.0.1",
     "@rolldown/plugin-babel": "^0.2.3",
+    "@turf/turf": "^7.3.5",
     "@types/babel__core": "^7.20.5",
     "@types/geojson": "^7946.0.16",
     "@types/node": "^24.13.2",
@@ -36,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.6.0",
     "sass-embedded": "^1.100.0",
+    "tsx": "^4.22.4",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.61.0",
     "vite": "^8.1.0"

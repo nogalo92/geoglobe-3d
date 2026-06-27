@@ -1,7 +1,7 @@
-import EarthScene from "@scenes/EarthScene/EarthScene";
 import "./App.css";
-import RenderingEngine from "./RenderingEngine/RenderingEngine";
-import GameUI from "./GameUI/GameUI";
+import EarthScene from "@scenes/EarthScene/EarthScene";
+import GameUI from "@gameUI/GameUI";
+import RenderingEngine from "@renderingEngine/RenderingEngine";
 
 function App() {
   return (

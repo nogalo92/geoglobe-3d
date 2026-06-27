@@ -1,21 +1,29 @@
 {
   "compilerOptions": {
     "paths": {
-      "@GUIcomponents/*": ["./src/components/GUI/*"],
-      "@scenes/*": ["./src/scenes/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@globalTypes": ["./src/types"],
-      "@data": ["./src/data"],
-      "@game": ["./src/game"],
+      "@scenes/*": ["./src/scenes/*"],
+      "@gameUI/*": ["./src/gameUI/*"],
+      "@renderingEngine/*": ["./src/rendering-engine/*"],
 
-      "@globalSignals": ["./src/signals"],
-      "@globalUtils": ["./src/utils"],
+      "@gameUtils": ["./src/game-logic/utils"],
+      "@gameSignals": ["./src/game-logic/signals"],
 
-      "@GUISignals": ["./src/GameUI/signals"],
-      "@GUIUtils": ["./src/GameUI/utils"],
+      "@gameUtilsUI": ["./src/gameUI/utils"],
+      "@gameSignalsUI": ["./src/gameUI/signals"],
 
       "@earthUtils": ["./src/scenes/EarthScene/utils"],
-      "@earthSignals": ["./src/scenes/EarthScene/signals"]
+      "@earthTypes": ["./src/scenes/EarthScene/types"],
+      "@earthSignals": ["./src/scenes/EarthScene/signals"],
+      "@earthAnimations": ["./src/scenes/EarthScene/animations"],
+
+      "@countryUtils": ["./src/country-data/utils"],
+      "@countryTypes": ["./src/country-data/types"],
+      "@countryRenderer": ["./src/country-data/renderers"],
+      "@countryManagers": ["./src/country-data/managers"],
+
+      "@globalSignals": ["./src/signals"],
+      "@globalUtils": ["./src/utils"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
     "target": "es2023",

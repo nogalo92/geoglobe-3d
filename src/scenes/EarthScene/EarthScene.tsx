@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import { type ArcRotateCamera } from "@babylonjs/core";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { Scene, type SceneEventArgs } from "react-babylonjs";
@@ -6,6 +8,7 @@ import {
   CAMERA_DEFAULTS,
   SCENE_DEFAULTS,
 } from "./earth.config";
+import { loadGameData, startNewGame } from "@gameUtils";
 import {
   hexToLinearColor3,
   showInspector,
@@ -13,14 +16,14 @@ import {
   toColor4,
   toVector3,
 } from "@globalUtils";
-
-import type { Country } from "@globalTypes";
-
-import { loadGameData, S_countries, startNewGame } from "@game";
+import { createEarth } from "@earthUtils";
+import { S_arcCamera, S_earthRoot } from "@earthSignals";
+import { S_countries } from "@gameSignals";
 import { S_sceneLoading } from "@globalSignals";
-import { createEarth, renderCountryOutline } from "@earthUtils";
-import { useEffect } from "react";
-import { S_arcCamera, S_earthRoot } from "./signals/earth.signals";
+
+import type { CountriesGeoJson } from "@countryTypes";
+import { CountryManager } from "@countryManagers";
+import { CountryRenderer } from "@countryRenderer";
 
 function EarthScene() {
   useEffect(() => {
@@ -39,9 +42,17 @@ function EarthScene() {
     S_earthRoot.value = earthRoot;
 
     scene.onReadyObservable.add(async () => {
-      S_countries.value.forEach((country: Country) => {
-        renderCountryOutline(country.feature, scene, earthRoot);
-      });
+      const countryManager = new CountryManager({
+        type: "FeatureCollection",
+        features: S_countries.value,
+      } as CountriesGeoJson);
+
+      const countryRenderer = new CountryRenderer(scene, countryManager);
+
+      countryRenderer.attachTo(earthRoot);
+      countryRenderer.build();
+
+      countryRenderer.hideCountry("RUS");
 
       if (isInspectorOn) {
         await showInspector(scene);
@@ -81,6 +92,7 @@ function EarthScene() {
         }
         target={toVector3(CAMERA_DEFAULTS.TARGET)}
         minZ={CAMERA_DEFAULTS.MIN_Z}
+        panningSensibility={CAMERA_DEFAULTS.PANNING}
         // wheelPrecision={CAMERA_DEFAULTS.PRECISION}
         // pinchPrecision={CAMERA_DEFAULTS.PRECISION}
         onCreated={(camera: ArcRotateCamera) => setupCamera(camera)}

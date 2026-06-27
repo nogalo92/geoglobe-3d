@@ -1,8 +1,6 @@
 import {
-  Color3,
   Scene as BabylonScene,
   MeshBuilder,
-  LinesMesh,
   TransformNode,
   CreateSphere,
   StandardMaterial,
@@ -11,11 +9,10 @@ import {
   Vector3,
   Matrix,
 } from "@babylonjs/core";
-
-import type { Country, CountryFeature, LonLat } from "@globalTypes";
+import type { CountryFeature } from "@countryTypes";
+import { S_arcCamera, S_earthRoot } from "@earthSignals";
 import { latLonToVector3 } from "@globalUtils";
-import { S_arcCamera, S_earthRoot } from "../signals/earth.signals";
-import { animateRotationQuaternion } from "../animations/earth.animations";
+import { animateRotationQuaternion } from "@earthAnimations";
 
 export const createEarth = (scene: BabylonScene): TransformNode => {
   const earth = CreateSphere("Earth", { diameter: 10, segments: 128 }, scene);
@@ -49,71 +46,6 @@ export const addCountryMarker = (
   return marker;
 };
 
-const COUNTRY_RADIUS = 5;
-
-const renderRing = (
-  ring: LonLat[],
-  scene: BabylonScene,
-  name: string,
-  parent?: TransformNode,
-): LinesMesh => {
-  const points = ring.map(([lon, lat]) =>
-    latLonToVector3(lat, lon, COUNTRY_RADIUS),
-  );
-
-  const line = MeshBuilder.CreateLines(
-    name,
-    {
-      points,
-    },
-    scene,
-  );
-
-  line.color = Color3.Green();
-
-  if (parent) {
-    line.parent = parent;
-  }
-
-  return line;
-};
-
-export const renderCountryOutline = (
-  feature: CountryFeature,
-  scene: BabylonScene,
-  parent?: TransformNode,
-) => {
-  const { geometry } = feature;
-  const countryName = String(
-    feature.properties.NAME ?? feature.properties.ADMIN ?? "country",
-  );
-
-  if (geometry.type === "Polygon") {
-    const rings = geometry.coordinates as LonLat[][];
-
-    rings.forEach((ring, ringIndex) => {
-      renderRing(ring, scene, `${countryName}-ring-${ringIndex}`, parent);
-    });
-
-    return;
-  }
-
-  if (geometry.type === "MultiPolygon") {
-    const polygons = geometry.coordinates as LonLat[][][];
-
-    polygons.forEach((polygon, polygonIndex) => {
-      polygon.forEach((ring, ringIndex) => {
-        renderRing(
-          ring,
-          scene,
-          `${countryName}-polygon-${polygonIndex}-ring-${ringIndex}`,
-          parent,
-        );
-      });
-    });
-  }
-};
-
 const DEG_TO_RAD = Math.PI / 180;
 
 export const getUprightGlobeRotation = (lat: number, lon: number) => {
@@ -121,11 +53,7 @@ export const getUprightGlobeRotation = (lat: number, lon: number) => {
 
   const pitch = -lat * DEG_TO_RAD;
 
-  return Quaternion.FromEulerAngles(
-    pitch,
-    yaw,
-    0, // no roll
-  );
+  return Quaternion.FromEulerAngles(pitch, yaw, 0);
 };
 
 const WORLD_UP = Vector3.Up();
@@ -186,18 +114,18 @@ function MatrixFromQuaternion(q: Quaternion) {
   q.toRotationMatrix(matrix);
   return matrix;
 }
-
-export const rotateToCountry = (country: Country) => {
+export const rotateToCountry = (country: CountryFeature) => {
   const earthRoot = S_earthRoot.value;
   const camera = S_arcCamera.value;
 
   if (!earthRoot || !camera) return;
 
-  const countryDirection = latLonToVector3(
-    country.center.lat,
-    country.center.lon,
-    1,
-  ).normalize();
+  const targetPoint =
+    country.properties.focusPoint ?? country.properties.centroid;
+
+  const [lon, lat] = targetPoint;
+
+  const countryDirection = latLonToVector3(lat, lon, 1).normalize();
 
   const cameraDirection = camera.position.normalize();
 
