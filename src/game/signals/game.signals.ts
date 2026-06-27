@@ -1,5 +1,6 @@
 import type { CountryFeature } from "@countryTypes";
 import { normalizeCountryName } from "@countryUtils";
+import type { GameManager } from "@gameManagers";
 import { computed, signal } from "@preact/signals-react";
 
 export const S_countries = signal<CountryFeature[]>([]);
@@ -16,6 +17,4 @@ export const S_countriesByName = computed(() => {
   return map;
 });
 
-export const S_selectedCountry = signal<CountryFeature | null>(null);
-export const S_guessedCountries = signal<CountryFeature[]>([]);
-export const S_secretCountry = signal<CountryFeature | null>(null);
+export const S_gameManager = signal<GameManager | null>(null);

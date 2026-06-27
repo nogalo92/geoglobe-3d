@@ -1,1 +1,1 @@
-export { CountryManager } from "./countryManager.ts";
+export { CountryManager } from "./CountryManager.ts";

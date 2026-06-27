@@ -6,8 +6,10 @@
       "@gameUI/*": ["./src/gameUI/*"],
       "@renderingEngine/*": ["./src/rendering-engine/*"],
 
-      "@gameUtils": ["./src/game-logic/utils"],
-      "@gameSignals": ["./src/game-logic/signals"],
+      "@gameUtils": ["./src/game/utils"],
+      "@gameSignals": ["./src/game/signals"],
+      "@gameTypes": ["./src/game/types"],
+      "@gameManagers": ["./src/game/managers"],
 
       "@gameUtilsUI": ["./src/gameUI/utils"],
       "@gameSignalsUI": ["./src/gameUI/signals"],

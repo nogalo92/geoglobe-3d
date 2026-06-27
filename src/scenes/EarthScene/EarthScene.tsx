@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { type ArcRotateCamera } from "@babylonjs/core";
 import { useIsMobile } from "@hooks/useIsMobile";
 import { Scene, type SceneEventArgs } from "react-babylonjs";
@@ -8,7 +6,6 @@ import {
   CAMERA_DEFAULTS,
   SCENE_DEFAULTS,
 } from "./earth.config";
-import { loadGameData, startNewGame } from "@gameUtils";
 import {
   hexToLinearColor3,
   showInspector,
@@ -18,20 +15,10 @@ import {
 } from "@globalUtils";
 import { createEarth } from "@earthUtils";
 import { S_arcCamera, S_earthRoot } from "@earthSignals";
-import { S_countries } from "@gameSignals";
 import { S_sceneLoading } from "@globalSignals";
-
-import type { CountriesGeoJson } from "@countryTypes";
-import { CountryManager } from "@countryManagers";
-import { CountryRenderer } from "@countryRenderer";
+import { initializeGame } from "../../game/gameBootstrap";
 
 function EarthScene() {
-  useEffect(() => {
-    loadGameData().then(() => {
-      startNewGame();
-    });
-  }, []);
-
   const isMobile = useIsMobile(768);
   const isInspectorOn = import.meta.env.VITE_INSPECTOR === "on";
 
@@ -39,21 +26,12 @@ function EarthScene() {
     scene.clearColor = toColor4(SCENE_DEFAULTS.CLEAR);
 
     const earthRoot = createEarth(scene);
+
     S_earthRoot.value = earthRoot;
 
+    await initializeGame(scene, earthRoot);
+
     scene.onReadyObservable.add(async () => {
-      const countryManager = new CountryManager({
-        type: "FeatureCollection",
-        features: S_countries.value,
-      } as CountriesGeoJson);
-
-      const countryRenderer = new CountryRenderer(scene, countryManager);
-
-      countryRenderer.attachTo(earthRoot);
-      countryRenderer.build();
-
-      countryRenderer.hideCountry("RUS");
-
       if (isInspectorOn) {
         await showInspector(scene);
       }

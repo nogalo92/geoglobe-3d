@@ -48,3 +48,7 @@ export const showInspector = async (scene: BabylonScene) => {
     console.error("Failed to show inspector:", error);
   }
 };
+
+export const toRadians = (value: number): number => {
+  return (value * Math.PI) / 180;
+};

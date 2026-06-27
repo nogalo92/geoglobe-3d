@@ -1,29 +1,48 @@
 import { useState, type SubmitEvent } from "react";
 
 import "./gameUI.scss";
+
 import { useSignalValue } from "@hooks/useSignalValue";
-import {
-  S_guessedCountries,
-  S_secretCountry,
-  S_selectedCountry,
-} from "@gameSignals";
-import { startNewGame, submitCountryGuess } from "@gameUtils";
+import { S_gameManager } from "@gameSignals";
+import { rotateToCountry } from "@earthUtils";
+import type { CountryFeature } from "@countryTypes";
+import { S_emptyCountry, S_emptyGuesses } from "@gameSignalsUI";
 
 function GameUI() {
   const [input, setInput] = useState("");
 
-  const guesses = useSignalValue(S_guessedCountries);
-  const selectedCountry = useSignalValue(S_selectedCountry);
-  const secretCountry = useSignalValue(S_secretCountry);
+  const gameManager = useSignalValue(S_gameManager);
+
+  const guesses = useSignalValue(gameManager?.guesses ?? S_emptyGuesses);
+  const selectedCountry = useSignalValue(
+    gameManager?.selectedCountry ?? S_emptyCountry,
+  );
+  const secretCountry = useSignalValue(
+    gameManager?.targetCountry ?? S_emptyCountry,
+  );
 
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const value = input.trim();
-    if (!value) return;
+    if (!value || !gameManager) return;
 
-    submitCountryGuess(value);
+    const result = gameManager.submitGuess(value);
+
+    if (result) {
+      rotateToCountry(result.country);
+    }
+
     setInput("");
+  };
+
+  const handleNewGame = () => {
+    gameManager?.startNewGame();
+  };
+
+  const handleGuessClick = (country: CountryFeature) => {
+    gameManager?.selectCountry(country);
+    rotateToCountry(country);
   };
 
   return (
@@ -38,14 +57,16 @@ function GameUI() {
             placeholder="Guess a country..."
           />
 
-          <button type="submit">Guess</button>
+          <button type="submit" disabled={!gameManager}>
+            Guess
+          </button>
         </form>
 
         {selectedCountry && (
           <p>Selected: {selectedCountry.properties.displayName}</p>
         )}
 
-        <button type="button" onClick={startNewGame}>
+        <button type="button" onClick={handleNewGame} disabled={!gameManager}>
           New Game
         </button>
 
@@ -53,7 +74,13 @@ function GameUI() {
           <h2>Guesses</h2>
 
           {guesses.map((guess) => (
-            <div key={guess.properties.id}>{guess.properties.displayName}</div>
+            <button
+              key={guess.country.properties.id}
+              type="button"
+              onClick={() => handleGuessClick(guess.country)}
+            >
+              {guess.country.properties.displayName} — {guess.distanceKm} km
+            </button>
           ))}
         </div>
 

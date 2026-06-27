@@ -4,10 +4,11 @@ import {
   MeshBuilder,
   Scene,
   TransformNode,
+  Vector3,
 } from "@babylonjs/core";
 import type { CountryFeature, CountryGeometry } from "@countryTypes";
 
-import type { CountryManager } from "../managers/countryManager";
+import type { CountryManager } from "@countryManagers";
 import type { Position } from "geojson";
 import { latLonToVector3 } from "@globalUtils";
 
@@ -17,6 +18,7 @@ export class CountryRenderer {
 
   private root: TransformNode;
   private countryRoots = new Map<string, TransformNode>();
+  private countryOutlines = new Map<string, LinesMesh>();
   private attached = false;
   private built = false;
   private COUNTRY_RADIUS = 5.01;
@@ -42,47 +44,43 @@ export class CountryRenderer {
     const countryId = country.properties.id;
 
     const countryRoot = new TransformNode(`country-${countryId}`, this.scene);
+
     countryRoot.parent = this.root;
 
     this.countryRoots.set(countryId, countryRoot);
 
-    this.buildCountryGeometry(country.geometry, countryRoot);
+    const outline = this.buildCountryGeometry(country.geometry, countryRoot);
+
+    this.countryOutlines.set(countryId, outline);
+  }
+
+  private coordinatesToPoints(coordinates: Position[]): Vector3[] {
+    return coordinates.map(([lon, lat]) =>
+      latLonToVector3(lat, lon, this.COUNTRY_RADIUS),
+    );
   }
 
   private buildCountryGeometry(
     geometry: CountryGeometry,
     parent: TransformNode,
-  ) {
+  ): LinesMesh {
+    const lines: Vector3[][] = [];
+
     if (geometry.type === "Polygon") {
-      this.buildPolygon(geometry.coordinates, parent);
-      return;
+      geometry.coordinates.forEach((boundary) => {
+        lines.push(this.coordinatesToPoints(boundary));
+      });
+    } else {
+      geometry.coordinates.forEach((polygon) => {
+        polygon.forEach((boundary) => {
+          lines.push(this.coordinatesToPoints(boundary));
+        });
+      });
     }
 
-    geometry.coordinates.forEach((polygon) => {
-      this.buildPolygon(polygon, parent);
-    });
-  }
-
-  private buildPolygon(polygon: Position[][], parent: TransformNode): void {
-    polygon.forEach((boundary, boundaryIndex) => {
-      this.buildPolygonOutline(boundary, `boundary-${boundaryIndex}`, parent);
-    });
-  }
-
-  private buildPolygonOutline(
-    coordinates: Position[],
-    name: string,
-    parent: TransformNode,
-  ): LinesMesh {
-    const points = coordinates.map(([lon, lat]) =>
-      latLonToVector3(lat, lon, this.COUNTRY_RADIUS),
-    );
-
-    const outline = MeshBuilder.CreateLines(
-      name,
-      {
-        points,
-      },
+    const outline = MeshBuilder.CreateLineSystem(
+      "outline",
+      { lines },
       this.scene,
     );
 
