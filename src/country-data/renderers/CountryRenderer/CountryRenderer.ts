@@ -31,6 +31,9 @@ export class CountryRenderer {
   private updateObserver: Nullable<Observer<Scene>> = null;
   private lastUpdateTime = 0;
 
+  private atmosphereMaterial?: StandardMaterial;
+  private atmospherePulse = 0;
+
   // private activeArc: Mesh | null = null;
 
   private readonly defaultOutlineColor = Color3.FromHexString("#6f8fa8");
@@ -55,6 +58,8 @@ export class CountryRenderer {
     for (const country of this.countryManager.getAll()) {
       this.buildCountry(country);
     }
+
+    this.createAtmosphere();
 
     this.startUpdateLoop();
     this.built = true;
@@ -112,6 +117,43 @@ export class CountryRenderer {
   //   this.activeArc.parent = this.root;
   // }
 
+  private createAtmosphere(): void {
+    const atmosphere = MeshBuilder.CreateSphere(
+      "guess-atmosphere",
+      {
+        diameter: this.COUNTRY_RADIUS * 2 + 0.35,
+        segments: 64,
+      },
+      this.scene,
+    );
+
+    atmosphere.parent = this.root;
+
+    const mat = new StandardMaterial("guess-atmosphere-mat", this.scene);
+    mat.diffuseColor = Color3.FromHexString("#62dfff");
+    mat.emissiveColor = Color3.FromHexString("#62dfff");
+    mat.alpha = 0.04;
+    mat.backFaceCulling = false;
+    mat.disableLighting = true;
+
+    atmosphere.material = mat;
+
+    this.atmosphereMaterial = mat;
+  }
+
+  private updateAtmosphere(dt: number): void {
+    this.atmospherePulse = this.damp(this.atmospherePulse, 0, 3.5, dt);
+
+    if (!this.atmosphereMaterial) return;
+
+    const color = Color3.FromHexString("#62dfff");
+
+    this.atmosphereMaterial.alpha = 0.035 + this.atmospherePulse * 0.13;
+    this.atmosphereMaterial.emissiveColor = color.scale(
+      0.8 + this.atmospherePulse * 2.5,
+    );
+  }
+
   private startUpdateLoop(): void {
     this.lastUpdateTime = performance.now();
 
@@ -125,6 +167,8 @@ export class CountryRenderer {
   }
 
   private update(dt: number): void {
+    this.updateAtmosphere(dt);
+
     for (const visual of this.countryVisuals.values()) {
       this.updateCountryVisual(visual, dt);
     }
@@ -191,6 +235,18 @@ export class CountryRenderer {
       visual.outlineMesh.alpha = Math.min(
         visual.outlineAlpha + pulse * 0.45,
         1,
+      );
+    }
+
+    if (visual.markerMesh) {
+      const scale = 1 + pulse * 1.4;
+      visual.markerMesh.scaling.setAll(scale);
+    }
+
+    if (visual.markerMaterial) {
+      visual.markerMaterial.diffuseColor = visual.fillColor;
+      visual.markerMaterial.emissiveColor = visual.fillColor.scale(
+        1.2 + pulse * 1.2,
       );
     }
 
@@ -332,7 +388,11 @@ export class CountryRenderer {
     );
   }
 
-  private createGuessMarker(country: CountryFeature, color: Color3): Mesh {
+  private createGuessMarker(
+    visual: CountryVisualState,
+    country: CountryFeature,
+    color: Color3,
+  ): Mesh {
     const countryId = country.properties.id;
 
     const [lon, lat] =
@@ -341,24 +401,27 @@ export class CountryRenderer {
     const marker = MeshBuilder.CreateSphere(
       `country-marker-${countryId}`,
       {
-        diameter: 0.06,
-        segments: 12,
+        diameter: 0.075,
+        segments: 16,
       },
       this.scene,
     );
 
-    marker.position = latLonToVector3(lat, lon, this.COUNTRY_RADIUS + 0.08);
+    marker.position = latLonToVector3(lat, lon, this.COUNTRY_RADIUS + 0.13);
 
     const mat = new StandardMaterial(
       `country-marker-mat-${countryId}`,
       this.scene,
     );
+
     mat.diffuseColor = color;
-    mat.emissiveColor = color.scale(1.5);
+    mat.emissiveColor = color.scale(1.8);
     mat.disableLighting = true;
 
     marker.material = mat;
-    marker.parent = this.root;
+    marker.parent = visual.root;
+
+    visual.markerMaterial = mat;
 
     return marker;
   }
@@ -444,9 +507,10 @@ export class CountryRenderer {
     visual.targetLift = 0.035;
     visual.pulseProgress = 0.65;
 
+    this.atmospherePulse = 1;
+
     if (!visual.markerMesh) {
-      const marker = this.createGuessMarker(country, color);
-      visual.markerMesh = marker;
+      visual.markerMesh = this.createGuessMarker(visual, country, color);
     }
   }
 

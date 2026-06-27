@@ -13,6 +13,12 @@ function GameUI() {
 
   const gameManager = useSignalValue(S_gameManager);
 
+  const [inputStatus, setInputStatus] = useState<
+    "idle" | "duplicate" | "unknown" | "no-target"
+  >("idle");
+
+  const [message, setMessage] = useState("");
+
   const guesses = useSignalValue(gameManager?.guesses ?? S_emptyGuesses);
   const selectedCountry = useSignalValue(
     gameManager?.selectedCountry ?? S_emptyCountry,
@@ -20,7 +26,6 @@ function GameUI() {
   const secretCountry = useSignalValue(
     gameManager?.targetCountry ?? S_emptyCountry,
   );
-
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -29,11 +34,43 @@ function GameUI() {
 
     const result = gameManager.submitGuess(value);
 
-    if (result) {
-      rotateToCountry(result.country);
+    switch (result.status) {
+      case "accepted": {
+        if (result.guess.isCorrect) {
+          // TODO: play victory animation
+          // TODO: reveal answer
+          // TODO: end game
+          alert("WIN");
+        }
+
+        rotateToCountry(result.guess.country);
+        setInput("");
+        setInputStatus("idle");
+        setMessage("");
+        break;
+      }
+
+      case "duplicate": {
+        setInputStatus("duplicate");
+        setMessage(`Already guessed ${result.country.properties.displayName}.`);
+        break;
+      }
+
+      case "unknown":
+        setMessage(`Unknown country: ${value}`);
+        break;
+
+      case "no-target": {
+        setInputStatus("no-target");
+        setMessage("Start a new game first.");
+        break;
+      }
     }
 
-    setInput("");
+    window.setTimeout(() => {
+      setInputStatus("idle");
+      setMessage("");
+    }, 1800);
   };
 
   const handleNewGame = () => {
@@ -52,10 +89,14 @@ function GameUI() {
 
         <form onSubmit={handleSubmit} className="game-ui__form">
           <input
+            className={`game-ui__input ${
+              inputStatus !== "idle" ? "game-ui__input--shake" : ""
+            }`}
             value={input}
             onChange={(event) => setInput(event.target.value)}
             placeholder="Guess a country..."
           />
+          {message && <p className="game-ui__message">{message}</p>}
 
           <button type="submit" disabled={!gameManager}>
             Guess

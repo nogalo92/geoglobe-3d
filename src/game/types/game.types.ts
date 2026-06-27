@@ -6,3 +6,19 @@ export type GuessResult = {
   isCorrect: boolean;
   distanceRatio: number;
 };
+
+export type SubmitGuessResult =
+  | {
+      status: "accepted";
+      guess: GuessResult;
+    }
+  | {
+      status: "duplicate";
+      country: CountryFeature;
+    }
+  | {
+      status: "unknown";
+    }
+  | {
+      status: "no-target";
+    };

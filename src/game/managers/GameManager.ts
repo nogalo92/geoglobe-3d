@@ -1,7 +1,7 @@
 import { signal } from "@preact/signals-react";
 import type { CountryFeature } from "@countryTypes";
 import type { CountryManager } from "@countryManagers";
-import type { GuessResult } from "@gameTypes";
+import type { GuessResult, SubmitGuessResult } from "@gameTypes";
 import { getCountryDistanceKm, getDistanceRatio } from "@gameUtils";
 import type { CountryRenderer } from "@countryRenderer";
 
@@ -31,32 +31,55 @@ export class GameManager {
     console.log("Secret:", target.properties.displayName);
   }
 
-  submitGuess(input: string): GuessResult | null {
+  submitGuess(input: string): SubmitGuessResult {
     const guessedCountry = this.countryManager.findByAlias(input);
-    if (!guessedCountry) return null;
+
+    if (!guessedCountry) {
+      return {
+        status: "unknown",
+      };
+    }
+
+    const alreadyGuessed = this.guesses.value.some(
+      (guess) => guess.country.properties.id === guessedCountry.properties.id,
+    );
+
+    if (alreadyGuessed) {
+      return {
+        status: "duplicate",
+        country: guessedCountry,
+      };
+    }
 
     const targetCountry = this.targetCountry.value;
-    if (!targetCountry) return null;
+
+    if (!targetCountry) {
+      return {
+        status: "no-target",
+      };
+    }
 
     const distanceKm = getCountryDistanceKm(guessedCountry, targetCountry);
-
     const distanceRatio = getDistanceRatio(distanceKm);
-
-    this.countryRenderer.markGuess(guessedCountry, distanceRatio);
 
     const isCorrect =
       guessedCountry.properties.id === targetCountry.properties.id;
 
-    const result = {
+    const guess: GuessResult = {
       country: guessedCountry,
       distanceKm,
       distanceRatio,
       isCorrect,
     };
 
-    this.guesses.value = [...this.guesses.value, result];
+    this.countryRenderer.markGuess(guessedCountry, distanceRatio);
 
-    return result;
+    this.guesses.value = [...this.guesses.value, guess];
+
+    return {
+      status: "accepted",
+      guess,
+    };
   }
 
   selectCountry(country: CountryFeature | null): void {
