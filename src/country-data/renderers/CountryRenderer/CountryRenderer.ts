@@ -3,17 +3,14 @@ import {
   LinesMesh,
   Mesh,
   MeshBuilder,
-  Observer,
   Scene,
   StandardMaterial,
   TransformNode,
   Vector3,
   VertexData,
-  type Nullable,
 } from "@babylonjs/core";
 import type { CountryFeature, CountryGeometry } from "@countryTypes";
 
-import type { CountryManager } from "@countryManagers";
 import type { Position } from "geojson";
 import { latLonToVector3 } from "@globalUtils";
 import earcut from "earcut";
@@ -21,21 +18,15 @@ import type { CountryVisualState } from "@countryTypes";
 
 export class CountryRenderer {
   private scene: Scene;
-  private countryManager: CountryManager;
 
   private root: TransformNode;
+
   private countryRoots = new Map<string, TransformNode>();
   private countryOutlines = new Map<string, LinesMesh>();
   private countryVisuals = new Map<string, CountryVisualState>();
 
-  private updateObserver: Nullable<Observer<Scene>> = null;
-  private lastUpdateTime = 0;
-
-  private atmosphereMaterial?: StandardMaterial;
-  private atmospherePulse = 0;
-
   // private activeArc: Mesh | null = null;
-
+  private readonly countries: readonly CountryFeature[];
   private readonly defaultOutlineColor = Color3.FromHexString("#6f8fa8");
   private readonly defaultFillColor = Color3.FromHexString("#ffffff");
 
@@ -44,9 +35,9 @@ export class CountryRenderer {
 
   private COUNTRY_RADIUS = 5.02;
 
-  constructor(scene: Scene, countryManager: CountryManager) {
+  constructor(scene: Scene, countries: CountryFeature[]) {
     this.scene = scene;
-    this.countryManager = countryManager;
+    this.countries = countries;
     this.root = new TransformNode("countries-root", scene);
   }
 
@@ -55,13 +46,10 @@ export class CountryRenderer {
       throw new Error("CountryRenderer is already built.");
     }
 
-    for (const country of this.countryManager.getAll()) {
+    for (const country of this.countries) {
       this.buildCountry(country);
     }
 
-    this.createAtmosphere();
-
-    this.startUpdateLoop();
     this.built = true;
   }
 
@@ -117,58 +105,7 @@ export class CountryRenderer {
   //   this.activeArc.parent = this.root;
   // }
 
-  private createAtmosphere(): void {
-    const atmosphere = MeshBuilder.CreateSphere(
-      "guess-atmosphere",
-      {
-        diameter: this.COUNTRY_RADIUS * 2 + 0.35,
-        segments: 64,
-      },
-      this.scene,
-    );
-
-    atmosphere.parent = this.root;
-
-    const mat = new StandardMaterial("guess-atmosphere-mat", this.scene);
-    mat.diffuseColor = Color3.FromHexString("#62dfff");
-    mat.emissiveColor = Color3.FromHexString("#62dfff");
-    mat.alpha = 0.04;
-    mat.backFaceCulling = false;
-    mat.disableLighting = true;
-
-    atmosphere.material = mat;
-
-    this.atmosphereMaterial = mat;
-  }
-
-  private updateAtmosphere(dt: number): void {
-    this.atmospherePulse = this.damp(this.atmospherePulse, 0, 3.5, dt);
-
-    if (!this.atmosphereMaterial) return;
-
-    const color = Color3.FromHexString("#62dfff");
-
-    this.atmosphereMaterial.alpha = 0.035 + this.atmospherePulse * 0.13;
-    this.atmosphereMaterial.emissiveColor = color.scale(
-      0.8 + this.atmospherePulse * 2.5,
-    );
-  }
-
-  private startUpdateLoop(): void {
-    this.lastUpdateTime = performance.now();
-
-    this.updateObserver = this.scene.onBeforeRenderObservable.add(() => {
-      const now = performance.now();
-      const dt = Math.min((now - this.lastUpdateTime) / 1000, 0.05);
-      this.lastUpdateTime = now;
-
-      this.update(dt);
-    });
-  }
-
-  private update(dt: number): void {
-    this.updateAtmosphere(dt);
-
+  update(dt: number): void {
     for (const visual of this.countryVisuals.values()) {
       this.updateCountryVisual(visual, dt);
     }
@@ -507,8 +444,6 @@ export class CountryRenderer {
     visual.targetLift = 0.035;
     visual.pulseProgress = 0.65;
 
-    this.atmospherePulse = 1;
-
     if (!visual.markerMesh) {
       visual.markerMesh = this.createGuessMarker(visual, country, color);
     }
@@ -531,11 +466,6 @@ export class CountryRenderer {
   }
 
   dispose(): void {
-    if (this.updateObserver) {
-      this.scene.onBeforeRenderObservable.remove(this.updateObserver);
-      this.updateObserver = null;
-    }
-
     this.root.dispose();
     this.countryRoots.clear();
     this.countryOutlines.clear();

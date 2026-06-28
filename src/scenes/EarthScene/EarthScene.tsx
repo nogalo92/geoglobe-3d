@@ -16,7 +16,7 @@ import {
 import { createEarth } from "@earthUtils";
 import { S_arcCamera, S_earthRoot } from "@earthSignals";
 import { S_sceneLoading } from "@globalSignals";
-import { initializeGame } from "../../game/gameBootstrap";
+import { createGame } from "../../game/createGame";
 
 function EarthScene() {
   const isMobile = useIsMobile(768);
@@ -26,10 +26,9 @@ function EarthScene() {
     scene.clearColor = toColor4(SCENE_DEFAULTS.CLEAR);
 
     const earthRoot = createEarth(scene);
-
     S_earthRoot.value = earthRoot;
 
-    await initializeGame(scene, earthRoot);
+    const game = await createGame(scene, earthRoot);
 
     scene.onReadyObservable.add(async () => {
       if (isInspectorOn) {
@@ -37,6 +36,10 @@ function EarthScene() {
       }
       S_sceneLoading.value = false;
     });
+
+    return () => {
+      game.dispose();
+    };
   };
 
   const setupCamera = (camera: ArcRotateCamera) => {

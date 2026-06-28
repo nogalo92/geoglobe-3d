@@ -4,10 +4,12 @@ import type { CountryManager } from "@countryManagers";
 import type { GuessResult, SubmitGuessResult } from "@gameTypes";
 import { getCountryDistanceKm, getDistanceRatio } from "@gameUtils";
 import type { CountryRenderer } from "@countryRenderer";
+import type { EarthManager } from "@earthManagers";
 
 export class GameManager {
   private countryManager: CountryManager;
   private countryRenderer: CountryRenderer;
+  private earthManager: EarthManager;
 
   readonly targetCountry = signal<CountryFeature | null>(null);
   readonly selectedCountry = signal<CountryFeature | null>(null);
@@ -15,10 +17,12 @@ export class GameManager {
 
   constructor(
     countryManager: CountryManager,
+    earthManager: EarthManager,
     countryRenderer: CountryRenderer,
   ) {
     this.countryManager = countryManager;
     this.countryRenderer = countryRenderer;
+    this.earthManager = earthManager;
   }
 
   startNewGame(): void {
@@ -73,6 +77,7 @@ export class GameManager {
     };
 
     this.countryRenderer.markGuess(guessedCountry, distanceRatio);
+    this.earthManager.pulseAtmosphere();
 
     this.guesses.value = [...this.guesses.value, guess];
 

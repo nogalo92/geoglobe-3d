@@ -18,6 +18,7 @@
       "@earthTypes": ["./src/scenes/EarthScene/types"],
       "@earthSignals": ["./src/scenes/EarthScene/signals"],
       "@earthAnimations": ["./src/scenes/EarthScene/animations"],
+      "@earthManagers": ["./src/scenes/EarthScene/managers"],
 
       "@countryUtils": ["./src/country-data/utils"],
       "@countryTypes": ["./src/country-data/types"],

@@ -1,4 +1,9 @@
+import type { CountryManager } from "@countryManagers";
+import type { CountryRenderer } from "@countryRenderer";
 import type { CountryFeature } from "@countryTypes";
+import type { GameManager } from "@gameManagers";
+import type { EarthManager } from "@scenes/EarthScene/managers";
+import type { GameLoop } from "../GameLoop";
 
 export type GuessResult = {
   country: CountryFeature;
@@ -22,3 +27,13 @@ export type SubmitGuessResult =
   | {
       status: "no-target";
     };
+
+export type GameInstance = {
+  countryManager: CountryManager;
+  countryRenderer: CountryRenderer;
+  earthManager: EarthManager;
+  gameManager: GameManager;
+  gameLoop: GameLoop;
+
+  dispose(): void;
+};

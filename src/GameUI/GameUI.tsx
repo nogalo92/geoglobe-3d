@@ -40,7 +40,6 @@ function GameUI() {
           // TODO: play victory animation
           // TODO: reveal answer
           // TODO: end game
-          alert("WIN");
         }
 
         rotateToCountry(result.guess.country);
